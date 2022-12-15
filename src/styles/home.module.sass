@@ -1,0 +1,151 @@
+
+.home
+  position: relative
+  display: flex
+  flex-flow: column
+  align-items: center
+  h1
+    font-size: 40px
+    span
+        color: #01C38E
+
+  .content
+    padding: 30px
+    display: flex
+    flex-flow: column
+    align-items: center
+    max-width: 1200px
+    width: 100%
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    position: relative
+
+   
+    p
+      text-align: center
+
+.bg
+  width: 720px
+  height: 500px
+
+.borderedContainer
+  box-shadow: 1px 1px 10px 0 #000
+  position: relative
+  border: 2px solid #fff
+  border-radius: 15px
+  overflow: hidden
+  margin: 1rem 0px
+  .play 
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    font-size: 80px
+    width: 120px
+    height: 120px
+    border-radius: 50%
+    border: 4px solid #fff
+    box-shadow: 1px 1px 10px 0 #000
+    transition: all 0.2s ease-in
+    cursor: pointer
+    svg
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+    &:hover
+      transform: translate(-50%, -50%) scale(1.1) 
+
+.section
+  position: relative
+  width: 100vw
+  height: 100vh
+
+.first
+  h1
+    font-size: 60px
+  .text
+    max-width: 640px
+
+.third
+  h1
+    margin-bottom: 60px
+
+.imageWithText
+  display: flex
+  flex-flow: row
+  gap: 100px
+  align-items: center
+  position: relative
+  .image
+    position: relative
+    flex-basis: auto
+    .bg
+      width: 480px
+      height: 320px
+      position: relative
+  .text
+    width: 100%
+    p
+      text-align: left
+  
+
+.steps
+  display: flex
+  position: relative 
+  >div
+    display: flex
+    flex-flow: column
+    align-items: center
+    gap: 10px
+    padding: 30px
+    border-top: 2px solid #fff
+    border-bottom: 2px solid #fff
+    background: #01c38f70
+    -webkit-backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px)
+    transition: all 0.2s ease-in-out
+    .icon
+      font-size: 60px
+    &:hover
+      // background-color: #01C38E
+      background: #01c38f70
+      -webkit-backdrop-filter: blur(10px)
+      backdrop-filter: blur(10px)
+      transform: scale(1.2)
+      border-radius: 20px
+      border: 2px solid #fff
+  
+  .step1
+    border-left: 2px solid #fff
+    border-radius: 20px 0px 0px 20px
+    &:hover
+      z-index: 1
+      
+      
+  .step2
+    &:hover
+     z-index: 1
+  .step3
+    border-right: 2px solid #fff
+    border-radius: 0px 20px 20px 0px
+    &:hover
+     z-index: 1
+
+
+.animatedbg
+  position: fixed
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+
+.fixedbg
+  position: fixed
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  background-image: url('/assets/images/bg.png')
+  background-size: cover
