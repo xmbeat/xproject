@@ -70,8 +70,8 @@ export default function Home() {
             <div className={styles.content}>
               <div className={styles.imageWithText}>
                 <motion.div className={styles.image}
-                  variants={side}
-                  initial="hiddenBottom"
+                  variants={zoom}
+                  initial="zoomOut"
                   whileInView="visible"
                 >
                   <div className={styles.borderedContainer}>
@@ -81,8 +81,8 @@ export default function Home() {
                   </div>
                 </motion.div>
                 <motion.div className={styles.text}
-                  variants={side}
-                  initial="hiddenTop"
+                  variants={zoom}
+                  initial="zoomOut"
                   whileInView="visible"
                 >
                   <h1>
