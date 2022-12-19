@@ -62,6 +62,25 @@ const resources = {
             "copyright": "x proyect @2022 Todos os direitos reservados"
         }
     },
+    kr:{
+        translation:{
+            "connect-wallet": "지갑 연결",
+             "connect": "연결",
+             "welcome": "누적한 미결제 금액을 지불하려는 모든 사용자에게 설명된 정보를 검토하십시오. 이 웹사이트는 귀하의 재산이 될 디지털 자산을 획득하여 교환 기회를 제공하기 위한 것입니다.",
+             "first-step-title": "동영상 보기",
+             "first-step-desc": "이해해야 하는 필수 정보에 대한 설명",
+             "second-step-title": "지갑 연결",
+             "second-step-desc": "디지털 자산을 받을 지갑입니다.",
+             "third-step-title": "자산 수령",
+             "third-step-desc": "면책조항에 서명하면 디지털 자산을 받을 수 있습니다.",
+             "metaverse-title": "<span>메타버스</span>가 무엇인가요?",
+             "metaverse-desc": "<p>메타버스는 여러 개의 서로 다른 가상 공간을 결합한 지속적인 3D 온라인 우주의 개념입니다. 이것을 인터넷의 미래 버전이라고 생각할 수 있습니다. 메타버스는 사용자가 일하고 만나고 만날 수 있게 해 줄 것입니다. 메타버스의 경제 시장은 2030년까지 크게 성장할 것입니다. 교육을 통해 최대 2700억 달러를 창출할 수 있으며 비디오 게임 시장에서 최대 1250억 달러의 영향을 미칠 수 있습니다.</p>",
+             "landian-title": " <span>랜디안</span>이 무엇인가요?",
+             "landiant-desc": "<p>역대 가장 초현실적인 메타버스, 블록체인 연결 및 웹 3.0 친화적입니다.</p><p>LANDIAN은 출시 당일 판매 기록을 깨고 하루 만에 매진되었습니다. 90,000 NFT보다 많습니다. </p>",
+             "disclaimer-title": "이용약관",
+             "copyright": "x 프로젝트 @2022 All rights reserved"
+        }
+    }
 };
 
 i18n
