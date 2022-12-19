@@ -87,16 +87,10 @@ export default function Home() {
                   initial="zoomOut"
                   whileInView="visible"
                 >
-                  <h1>
-                    ¿Qué es el <span>Metaverso</span>?
+                  <h1 dangerouslySetInnerHTML={{__html: t('metaverse-title')}}>
+                   
                   </h1>
-                  <p>
-                    El Metaverso es un concepto de un universo 3D persistente en linea que combina múltiples espacios virtuales diferentes. Puedes pensar esto como versión futura del internet. El Metaverso permitirá a los usuarios trabajar, reunirse, jugar y socializar juntos en estos
-                    espacios 3D
-                  </p><p>
-                    El mercado económico para el Metaverso crecerá para el 2030 de manera drástica. En el comercio electrónico se calcula que el impacto se situaría entre los 2 y 2,6 billones de dólares, mientras que en la educación podría generar hasta 270.000 millones de dólares y, en
-                    el mercado de videojuegos, su impacto podría ser de hasta 125.000 millones de dólares.
-                  </p>
+                  <div dangerouslySetInnerHTML={{__html:t('metaverse-desc')}}></div>
                 </motion.div>
               </div>
             </div>
@@ -112,17 +106,10 @@ export default function Home() {
                 className={styles.imageWithText}>
 
                 <div className={styles.text}>
-                  <h1>
-                    ¿Qué es <span>Landian</span>?
+                  <h1 dangerouslySetInnerHTML={{__html:t('landian-title')}}>
                   </h1>
-                  <p>
-                    El metaverso mas hiperealista de la historia conectado
-                    Con blockchain y amigable con la web 3.0.
-                  </p><p>
-                    LANDIAN rompió récord de ventas el día
-                    de su lanzamiento, vendiendo en un solo día
-                    más de 90 mil NFT.
-                  </p>
+                  <div dangerouslySetInnerHTML={{__html: t('landiant-desc')}}></div>
+                 
                 </div>
                 <div className={styles.image}>
                   <div className={styles.borderedContainer}>

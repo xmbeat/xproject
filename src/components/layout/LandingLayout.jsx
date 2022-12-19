@@ -12,7 +12,7 @@ import Link from 'next/link';
 export default function LandingLayout({ children, onlyTranslate = false, logo = null }) {
     const [modalVisibility, setModalVisibility] = useState(false);
     const [isNavbarBlured, setIsNavarBlured] = useState(false)
-
+    const {t, i18n} = useTranslation()
     useEffect(() => {
         let listener = () => {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -29,9 +29,16 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
             window.removeEventListener('resize', listener)
         }
     })
-
-    const handleLanguageChange = useCallback((locale)=>{
+    useEffect(()=>{
+        if (localStorage.getItem('language')){
+            i18n.changeLanguage(localStorage.getItem('language'))
+        }
         
+    },[])
+    const handleLanguageChange = useCallback((locale)=>{
+        i18n.changeLanguage(locale)
+        localStorage.setItem('language', locale)
+
     }, [])
     return <div className={styles.container}>
         <Modal show={modalVisibility} onClose={() => setModalVisibility(false)} title={'Select your language'}>
@@ -49,9 +56,7 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
                     <li>
                         <Link href="/" onClick={() => handleLanguageChange('kr')}>   <div className={styles.flagContainer}><Flags.KR title="Korean" /> </div> 한국어 </Link>
                     </li>
-                    <li>
-                        <Link href="/" onClick={() => handleLanguageChange('cn')}>   <div className={styles.flagContainer}><Flags.CN title="Chinesse" /> </div> 中國人 </Link>
-                    </li>
+                   
                 </ul>
             </div>
         </Modal>
@@ -65,13 +70,13 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
                 </div>
                 {!onlyTranslate &&
                     <Link href="/connect" className={styles.desktopOnly}> 
-                        <span className={styles.button}>Connectar Wallet</span>
+                        <span className={styles.button}>{t('connect-wallet')}</span>
                     </Link>
                    
                 }
                   {!onlyTranslate &&
                     <Link className={styles.mobileOnly} href="/connect">
-                        <span className={styles.button}>Connect</span>
+                        <span className={styles.button}>{t('connect')}</span>
                     </Link>
                    
                 }
@@ -82,7 +87,7 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
         </div>
         <div className={styles.footer}>
             <div className={styles.disclaimer}>
-                x project @2022 All rights reserved
+                {t('copyright')}
             </div>
             <div className={styles.imageContainer}>
                 {logo}
@@ -97,7 +102,7 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
             </div>
             <div className={styles.linkContainer}>
                 <Link href="/terms-conditions">
-                    terminos y condiciones
+                    {t('disclaimer-title')}
                 </Link>
             </div>
 
