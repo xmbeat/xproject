@@ -4,9 +4,11 @@ import LandingLayout from "components/layout/LandingLayout";
 import Scene from "components/threejs/scene";
 import Head from "next/head";
 import { Suspense } from "react";
+import { useTranslation } from "react-i18next";
 import styles from 'styles/home.module.sass'
 import localStyles from './transaction.module.sass'
 export default function Transaction() {
+    const {t} = useTranslation()
     return <LandingLayout
         logo={
             <h1><span>x</span> project</h1>
@@ -32,22 +34,22 @@ export default function Transaction() {
                 </Canvas>
             </div>
             <div className={localStyles.content}>
-                <h2>Usuario: <span>Juan Hebert Chable</span></h2>
+                <h2>{t('user')}: <span>Juan Hebert Chable</span></h2>
                 <div className={localStyles.preview}>
                     <div className={localStyles.box}>
-                        <div className={localStyles.title}>Saldo Pendiente:</div>
+                        <div className={localStyles.title}>{t('balance-due')}</div>
                         <div className={localStyles.text}>1.255 BTC</div>
                     </div>
                     <div className={localStyles.convert}>
 
                     </div>
                     <div className={localStyles.box}>
-                        <div className={localStyles.title}>Tierras a Recibir:</div>
+                        <div className={localStyles.title}>{t('land-to-receive')}</div>
                         <div className={localStyles.text}>6</div>
                     </div>
                 </div>
                 <form action='/'>
-                <input type="submit" value="Confirm transaction"/>
+                <input type="submit" value={t('confirm-transaction')}/>
                 </form>
             </div>
         </div>
