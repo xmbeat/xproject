@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from 'styles/home.module.sass'
 import { BsFillPlayFill, BsFillPlayCircleFill } from 'react-icons/bs'
-import { IoWallet } from 'react-icons/io'
+import { IoIosWallet, IoWallet } from 'react-icons/io'
 import { motion } from 'framer-motion'
 import { zoom, side } from 'effects/effects'
 import { Canvas } from '@react-three/fiber'
@@ -13,7 +13,9 @@ import Wave from 'components/threejs/wave'
 import { Bloom, EffectComposer } from '@react-three/postprocessing'
 import Scene from 'components/threejs/scene'
 import LandingLayout from 'components/layout/LandingLayout'
+import { useTranslation } from 'react-i18next'
 export default function Home() {
+  const {t} = useTranslation()
   return (
     <LandingLayout
       logo={
@@ -52,7 +54,8 @@ export default function Home() {
                   variants={zoom}
                   initial="zoomOut"
                   whileInView="visible"
-                >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                > 
+                {t('welcome')}
                 </motion.p>
               </div>
               <div className={styles.borderedContainer}>
@@ -138,27 +141,33 @@ export default function Home() {
               <div className={styles.steps}>
                 <div className={styles.step1}>
                   <h2>
-                    Ver el Video
+                    <span>1</span>
+                    {t('first-step-title')}
                   </h2>
                   <div className={styles.icon}>
                     <BsFillPlayCircleFill />
                   </div>
+                  <div className={styles.desc}>{t('first-step-desc')}</div>
                 </div>
                 <div className={styles.step2}>
                   <h2>
-                    Ver el Video
+                    <span>2</span>
+                    {t('second-step-title')}
                   </h2>
                   <div className={styles.icon}>
-                    <BsFillPlayCircleFill />
+                    <IoIosWallet />
                   </div>
+                  <div className={styles.desc}>{t('second-step-desc')}</div>
                 </div>
                 <div className={styles.step3}>
                   <h2>
-                    Ver el Video
+                    <span>3</span>
+                    {t('third-step-title')}
                   </h2>
                   <div className={styles.icon}>
                     <BsFillPlayCircleFill />
                   </div>
+                  <div className={styles.desc}>{t('third-step-desc')}</div>
                 </div>
               </div>
             </div>
