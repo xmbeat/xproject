@@ -64,9 +64,16 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
                     <MdLanguage />
                 </div>
                 {!onlyTranslate &&
-                    <Link href="/connect">
+                    <Link href="/connect" className={styles.desktopOnly}> 
                         <span className={styles.button}>Connectar Wallet</span>
                     </Link>
+                   
+                }
+                  {!onlyTranslate &&
+                    <Link className={styles.mobileOnly} href="/connect">
+                        <span className={styles.button}>Connect</span>
+                    </Link>
+                   
                 }
             </div>
         </div>

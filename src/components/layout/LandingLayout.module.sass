@@ -36,6 +36,8 @@
         width: 100%
         display: flex
         flex-flow: column
+        @media (min-width: 600px)
+            min-height: calc( 100vh - 200px )
     .footer
         background: #018cc388
         -webkit-backdrop-filter: blur(10px)
@@ -48,6 +50,7 @@
         gap: 1rem
         height: 100px
         align-items: center
+
         .disclaimer
             // flex-grow: 1
             padding: 0px 0px 0px 30px
@@ -71,9 +74,20 @@
                 margin-right: 0
             img
                 width: 140px
+        @media (max-width: 600px)
+            flex-flow: column
+            height: 200px
+            justify-content: center
+
+
+.mobileOnly
+    display: none
     @media (max-width: 600px)
-        
-                
+        display: block
+.desktopOnly
+    display: none
+    @media (min-width: 600px)
+        display: block
 .button
     background: transparent
     padding: .6rem 1.5rem

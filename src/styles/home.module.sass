@@ -9,7 +9,7 @@
     span
         color: #01C38E
 
-  .content
+  .centeredContent
     padding: 30px
     display: flex
     flex-flow: column
@@ -20,14 +20,21 @@
     top: 50%
     transform: translate(-50%, -50%)
     position: relative
-
-   
     p
       text-align: center
-
+  .adaptativeContent
+    padding: 10px
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: center
+    max-width: 1200px
 .bg
   width: 720px
   height: 500px
+  @media (max-width: 600px)
+    width: 360px
+    height: 280px
 
 .borderedContainer
   box-shadow: 1px 1px 10px 0 #000
@@ -60,7 +67,23 @@
 .section
   position: relative
   width: 100vw
+  overflow: hidden
   height: 100vh
+
+.fixedSize
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+  position: relative
+
+.adaptativeSize
+  position: relative
+  width: 100vw
+  min-height: 100vh
+  display: flex
+  flex-flow: column
+  justify-content: center
+  align-items: center
 
 .first
   h1
@@ -89,11 +112,18 @@
     width: 100%
     p
       text-align: left
-  
+  @media(max-width: 600px)
+    flex-flow: column
+    gap: 10px
+    .image
+      .bg
+        width: 360px
+        height: 280px
+
 
 .steps
   display: flex
-  position: relative 
+  position: relative
   >div
     display: flex
     flex-flow: column
@@ -123,7 +153,6 @@
     &:hover
       z-index: 1
       
-      
   .step2
     &:hover
      z-index: 1
@@ -133,7 +162,21 @@
     &:hover
      z-index: 1
 
+  @media(max-width: 600px)
+    flex-flow: column
+    >div
+      border-top: none
+      border-bottom: none 
+      border-left: 2px solid #fff
+      border-right: 2px solid #fff
 
+    .step1
+      border-top: 2px solid #fff
+      border-radius: 20px 20px 0px 0px
+    .step3
+      border-bottom: 2px solid #fff
+      border-radius: 0px 0px 20px 20px
+     
 .animatedbg
   position: fixed
   left: 0

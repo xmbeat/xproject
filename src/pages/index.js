@@ -40,8 +40,8 @@ export default function Home() {
         </div>
 
         <main className={styles.home}>
-          <section className={`${styles.section} ${styles.first}`}>
-            <div className={styles.content}>
+          <section className={`${styles.fixedSize} ${styles.first}`}>
+            <div className={styles.centeredContent}>
               <motion.h1
                 variants={side}
                 initial="hidden"
@@ -65,8 +65,8 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className={styles.section}>
-            <div className={styles.content}>
+          <section className={styles.adaptativeSize}>
+            <div className={styles.adaptativeContent}>
               <div className={styles.imageWithText}>
                 <motion.div className={styles.image}
                   variants={zoom}
@@ -99,15 +99,14 @@ export default function Home() {
             </div>
           </section>
 
-          <section className={styles.section}>
-            <div className={styles.content}
-             
+          <section className={styles.fixedSize}>
+            <div className={styles.centeredContent}
             >
               <motion.div
                  variants={zoom}
                  initial="zoomOut"
                  whileInView="visible"
-              className={styles.imageWithText}>
+                className={styles.imageWithText}>
 
                 <div className={styles.text}>
                   <h1>
@@ -133,8 +132,8 @@ export default function Home() {
             </div>
           </section>
 
-          <section className={`${styles.section} ${styles.third}`}>
-            <div className={styles.content}>
+          <section className={`${styles.fixedSize} ${styles.third}`}>
+            <div className={styles.centeredContent}>
               <h1>Tutorial</h1>
               <div className={styles.steps}>
                 <div className={styles.step1}>
