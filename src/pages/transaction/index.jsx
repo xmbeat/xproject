@@ -11,7 +11,7 @@ export default function Transaction() {
     const {t} = useTranslation()
     return <LandingLayout
         logo={
-            <h1><span>x</span> project</h1>
+            <h1 className={styles.logo}><span>x</span> project</h1>
         }
     >
         <Head>

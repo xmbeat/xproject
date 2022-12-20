@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <LandingLayout
       logo={
-        <h1><span>x</span> project</h1>
+        <h1 className={styles.logo}><span>x</span> project</h1>
       }
       >
       <div>
@@ -58,13 +58,8 @@ export default function Home() {
                 {t('welcome')}
                 </motion.p>
               </div>
-              <div className={styles.borderedContainer}>
-                <div className={styles.bg}>
-                  <Image alt="video" src={'/assets/images/video_banner.png'} style={{ "objectFit": "cover" }} fill={true} />
-                </div>
-                <div className={styles.play}>
-                  <BsFillPlayFill />
-                </div>
+              <div className={styles.play}>
+                <BsFillPlayFill />
               </div>
             </div>
           </section>

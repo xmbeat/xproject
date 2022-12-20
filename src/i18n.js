@@ -25,7 +25,13 @@ const resources = {
             "user": "User",
             "balance-due": "Balance Due",
             "land-to-receive": "Land to Receive",
-            "confirm-transaction": "Confirm transaction"
+            "confirm-transaction": "Confirm transaction",
+            "wallet": "Wallet",
+            "wallet-desc": "Your address wallet here",
+            "email": "Email",
+            "email-desc": "Your email address here",
+            "confirm": "Confirm",
+            "start-now": "Start now"
         }
     },
     es: {
@@ -48,7 +54,13 @@ const resources = {
             "user": "Usuario",
             "balance-due": "Saldo adeudado",
             "land-to-receive": "Tierra para Recibir",
-            "confirm-transaction": "Confirmar transacción"
+            "confirm-transaction": "Confirmar transacción",
+            "wallet": "Wallet",
+            "wallet-desc": "Tu dirección de wallet aquí",
+            "email": "Email",
+            "email-desc": "Tu email aquí",
+            "confirm": "Confirmar",
+            "start-now": "Empezar ahora"
         }
     },
     pt: {
@@ -71,7 +83,13 @@ const resources = {
             "user": "Usuário",
             "balance-due": "Saldo devido",
             "land-to-receive": "Terra a receber",
-            "confirm-transaction": "Confirmar transação"
+            "confirm-transaction": "Confirmar transação",
+            "wallet": "Carteira",
+            "wallet-desc": "O endereço da sua carteira aqui",
+            "email": "E-mail",
+            "email-desc": "Seu e-mail aqui",
+            "confirm": "Confirmar",
+            "start-now": "Comece agora"
         }
     },
     kr: {
@@ -94,7 +112,13 @@ const resources = {
             "user": "사용자",
             "balance-due": "미납 잔액",
             "land-to-receive": "받을 땅",
-            "confirm-transaction": "거래 확인"
+            "confirm-transaction": "거래 확인",
+            "wallet": "지갑",
+            "wallet-desc": "지갑 주소는 여기",
+            "email": "이메일",
+            "email-desc": "귀하의 이메일 주소",
+            "confirm": "확인",
+            "start-now": "지금 시작"
         }
     }
 };

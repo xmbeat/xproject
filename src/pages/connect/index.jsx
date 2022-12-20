@@ -1,25 +1,27 @@
 import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 import styles from './connect.module.sass'
 export default function Connect() {
+    const {t} = useTranslation()
     return <>
         <main>
             <div className={styles.content}>
                 <h3>
-                    Empieza ahora
+                    {t('start-now')}
                 </h3>
-                <h1> Connectar Wallet</h1>
+                <h1> {t('connect-wallet')}</h1>
                 <div className={styles.separator}></div>
                 <form action="/transaction">
                     <div>
-                        <label htmlFor="wallet">Wallet</label>
-                        <input type="text" placeholder='Your address wallet here' />
+                        <label htmlFor="wallet">{t('wallet')}</label>
+                        <input type="text" placeholder={t('wallet-desc')} />
                     </div>
                     <div>
-                        <label htmlFor="email"> Email</label>
-                        <input type="text" placeholder='Your address wallet here' />
+                        <label htmlFor="email"> {t('email')}</label>
+                        <input type="text" placeholder={t('email-desc')} />
                     </div>
                     <div className={styles.separator}></div>
-                    <input type="submit" value="confirmar" />
+                    <input type="submit" value={t('confirm')} />
                 </form>
             </div>
             <div className={styles.logoContainer}>
