@@ -1,10 +1,27 @@
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import styles from './connect.module.sass'
+import homeStyles from 'styles/home.module.sass'
+import { Canvas } from '@react-three/fiber'
+import { Suspense } from 'react'
+import { PerspectiveCamera } from '@react-three/drei'
+import Scene from 'components/threejs/scene'
 export default function Connect() {
-    const {t} = useTranslation()
+    const { t } = useTranslation()
     return <>
         <main>
+            <div className={homeStyles.fixedbg}></div>
+            <div className={homeStyles.animatedbg}>
+                <Canvas style={{ height: '100vh', width: '100vw', zIndex: -1 }}
+                    dpr={[1, 2]} >
+                    <Suspense fallback={null}>
+                        <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={75} />
+                        <ambientLight intensity={1} position={[10, 10, 0]} />
+                        <Scene />
+                    </Suspense>
+                </Canvas>
+
+            </div>
             <div className={styles.content}>
                 <h3>
                     {t('start-now')}
