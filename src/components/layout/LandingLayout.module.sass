@@ -18,7 +18,7 @@
         z-index: 10
         transition: all 0.3s ease-in-out
         &.blur
-            background: #008a7370
+            background: #06304470
             -webkit-backdrop-filter: blur(10px)
             backdrop-filter: blur(10px)
             height: 100px
@@ -39,7 +39,7 @@
         @media (min-width: 600px)
             min-height: calc( 100vh - 200px )
     .footer
-        background: #018cc388
+        background: #018cc300
         -webkit-backdrop-filter: blur(10px)
         backdrop-filter: blur(10px)
         font-size: bold
@@ -55,11 +55,16 @@
             // flex-grow: 1
             padding: 0px 0px 0px 30px
             font-weight: bold
+            width: 100%
         .linkContainer
             padding: 0px 30px 0px 
+            width: 100%
+            display: flex
+            justify-content: flex-end
         .imageContainer
             // width: calc(50% + 70px)
             width: auto
+            width: 100%
             position: relative
             display: flex
             flex-direction: column

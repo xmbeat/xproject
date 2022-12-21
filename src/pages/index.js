@@ -117,8 +117,8 @@ export default function Home() {
             </div>
           </section>
 
-          <section className={`${styles.fixedSize} ${styles.third}`}>
-            <div className={styles.centeredContent}>
+          <section className={`${styles.adaptativeSize} ${styles.third}`}>
+            <div className={styles.adaptativeContent}>
               <h1>Tutorial</h1>
               <div className={styles.steps}>
                 <div className={styles.step1}>
