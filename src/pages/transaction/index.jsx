@@ -5,6 +5,7 @@ import Scene from "components/threejs/scene";
 import Head from "next/head";
 import { Suspense } from "react";
 import { useTranslation } from "react-i18next";
+import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 import styles from 'styles/home.module.sass'
 import localStyles from './transaction.module.sass'
 export default function Transaction() {
@@ -41,7 +42,9 @@ export default function Transaction() {
                         <div className={localStyles.text}>1.255 BTC</div>
                     </div>
                     <div className={localStyles.convert}>
-
+                        <div className={localStyles.icon}>
+                            <BsFillArrowRightCircleFill/>
+                        </div>
                     </div>
                     <div className={localStyles.box}>
                         <div className={localStyles.title}>{t('land-to-receive')}</div>
