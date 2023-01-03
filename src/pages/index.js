@@ -15,6 +15,7 @@ import Scene from 'components/threejs/scene'
 import LandingLayout from 'components/layout/LandingLayout'
 import { useTranslation } from 'react-i18next'
 import Modal from 'components/Modal/modal'
+import News from 'components/news_section/news'
 export default function Home() {
   const { t } = useTranslation()
   const [showPlayer, setShowPlayer] = useState(false)
@@ -71,6 +72,11 @@ export default function Home() {
               </div>
             </div>
           </section>
+          
+          <section className={`${styles.fixedSize}`}>
+            <News/>
+          </section>
+
           <section className={styles.adaptativeSize}>
             <div className={styles.adaptativeContent}>
               <div className={styles.imageWithText}>
