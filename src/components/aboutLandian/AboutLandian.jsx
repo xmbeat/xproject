@@ -1,7 +1,8 @@
 import styles from "./AboutLandian.module.sass";
-import Lottie from 'react-lottie';
-import * as animationData from "../../../public/lotties/eyes.json"
+import Lottie from "react-lottie";
+import * as animationData from "../../../public/lotties/eyes.json";
 import { useState } from "react";
+import Link from "next/link";
 
 const AboutLandian = () => {
   const [more, setMore] = useState(false);
@@ -66,8 +67,15 @@ const AboutLandian = () => {
         ) : (
           <button onClick={viewLess}>Read less ...</button>
         )}
+        <div className={styles.whitepaper}> 
+        <p>Learn more in</p>
+        <button className={styles.whitepaperbtn}>
+          <Link target="_blank" href="https://www.landian.io">Landian</Link>
+        </button>
+        </div>
+        
       </div>
-        <Lottie options={defaultOptions} height={650} width={650} />
+      <Lottie options={defaultOptions} height={650} width={650} />
     </section>
   );
 };
