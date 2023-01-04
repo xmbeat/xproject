@@ -12,6 +12,7 @@ var side = {
         opacity: 0
     },
     hiddenRight: {
+        y: 0,
         x: 100,
         opacity: 0
     },
