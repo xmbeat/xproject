@@ -31,7 +31,8 @@ const resources = {
             "email": "Email",
             "email-desc": "Your email address here",
             "confirm": "Confirm",
-            "start-now": "Start now"
+            "start-now": "Start now",
+            "marketplace": "Marketplace"
         }
     },
     es: {
@@ -60,7 +61,8 @@ const resources = {
             "email": "Email",
             "email-desc": "Tu email aquí",
             "confirm": "Confirmar",
-            "start-now": "Empezar ahora"
+            "start-now": "Empezar ahora",
+            "marketplace": "Marketplace"
         }
     },
     pt: {
@@ -89,7 +91,8 @@ const resources = {
             "email": "E-mail",
             "email-desc": "Seu e-mail aqui",
             "confirm": "Confirmar",
-            "start-now": "Comece agora"
+            "start-now": "Comece agora",
+            "marketplace": "Mercado"
         }
     },
     kr: {
@@ -118,7 +121,38 @@ const resources = {
             "email": "이메일",
             "email-desc": "귀하의 이메일 주소",
             "confirm": "확인",
-            "start-now": "지금 시작"
+            "start-now": "지금 시작",
+            "marketplace": "시장"
+        }
+    },
+    vi: {
+        translation: {
+            "connect-wallet": "Kết nối ví",
+            "connect": "Kết nối",
+            "welcome": "Đối với tất cả người dùng muốn thanh toán số tiền tích lũy đang chờ xử lý của họ, hãy xem lại thông tin được mô tả. Trang web này nhằm cung cấp cơ hội trao đổi, lấy tài sản kỹ thuật số sẽ là tài sản của bạn.",
+            "first-step-title": "Xem video",
+            "first-step-desc": "Giải thích thông tin cần thiết bạn cần hiểu",
+            "second-step-title": "Kết nối Ví",
+            "second-step-desc": "Đây là ví của bạn, nơi bạn sẽ nhận tài sản kỹ thuật số của mình.",
+            "third-step-title ": "Nhận tài sản",
+            "third-step-desc": "Sau khi ký tuyên bố từ chối trách nhiệm, bạn sẽ có thể nhận được tài sản kỹ thuật số của mình",
+            "metaverse-title": "<span>Metaverse</span> là gì?",
+            "metaverse-desc": "<p>Metaverse là một khái niệm về vũ trụ trực tuyến 3D liên tục kết hợp nhiều không gian ảo khác nhau. Bạn có thể coi đây là phiên bản tương lai của internet. Metaverse sẽ cho phép người dùng làm việc, gặp gỡ , chơi và giao lưu cùng nhau trong những không gian 3D này</p><p>Thị trường kinh tế cho Metaverse sẽ phát triển mạnh mẽ vào năm 2030. Trong thương mại điện tử, người ta ước tính rằng tác động sẽ nằm trong khoảng từ 2 đến 2,6 nghìn tỷ đô la, trong khi đó trong lĩnh vực giáo dục, nó có thể tạo ra tới 270.000 triệu đô la và trong thị trường trò chơi điện tử, tác động của nó có thể lên tới 125.000 triệu đô la.</p>",
+            "landian-title": " <span>Landian</span> là gì?",
+            "landiant-desc": "<p>Metaverse siêu thực tế nhất từ trước đến nay, được kết nối với chuỗi khối và thân thiện với web 3.0.</p><p>LANDIAN đã phá kỷ lục doanh số bán hàng vào ngày ra mắt, bán hết sạch chỉ trong một ngày nữa hơn 90 nghìn NFT.</p>",
+            "disclaimer-title": "Tuyên bố từ chối trách nhiệm",
+            "copyright": "dự án x @2022 Bảo lưu mọi quyền",
+            "user": "Người dùng",
+            "balance-due": "Số Dư Đến Hạn",
+            "land-to-receive": "Đất nhận",
+            "confirm-transaction": "Xác nhận giao dịch",
+            "wallet": "Ví",
+            "wallet-desc": "Địa chỉ ví của bạn ở đây",
+            "email": "thư điện tử",
+            "email-desc": "Địa chỉ email của bạn ở đây",
+            "confirm": "Xác nhận",
+            "start-now": "Bắt đầu ngay",
+            "marketplace": "chợ"
         }
     }
 };

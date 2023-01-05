@@ -29,6 +29,11 @@ export default function LangSelector({onChange = () => {}}) {
             code: 'kr',
             name: '한국어',
             flag: <Flags.KR title="Korean" />
+        },
+        {
+            code: 'vi',
+            name: 'Tiếng Việt',
+            flag: <Flags.VN title="Vietnamese" />
         }
     ]
 

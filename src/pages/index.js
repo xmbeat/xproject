@@ -18,6 +18,7 @@ import Modal from 'components/Modal/modal'
 import News from 'components/news_section/news'
 import VideoCarrousel from 'components/VideoCarrousel/VideoCarrousel'
 import AboutLandian from 'components/aboutLandian/AboutLandian'
+import Marketplace from 'components/Marketplace'
 export default function Home() {
   const { t } = useTranslation()
   const [showPlayer, setShowPlayer] = useState(false)
@@ -172,6 +173,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+          <Marketplace />
         </main>
       </div>
     </LandingLayout>
