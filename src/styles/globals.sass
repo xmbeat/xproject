@@ -1,3 +1,5 @@
+@import '/src/styles/mixins'
+
 @font-face 
   font-family: 'Mont'
   src: url('/assets/fonts/mont/Mont-Light.otf')
@@ -61,6 +63,7 @@ body
   background-color: #041824  
   font-family: Mont
   font-size: 18px
+  @include hideScrollbar
 
 a 
   color: inherit
