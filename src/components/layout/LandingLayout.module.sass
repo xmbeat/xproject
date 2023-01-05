@@ -124,9 +124,39 @@
     font-size: 1.5rem
     cursor: pointer
     transition: all 0.3s ease-in-out
-    &:hover
-        background: #018cc388
+    position: relative
 
+    &:first-child
+        &:hover
+            // transform: scale(1.05)
+
+    .langOptions
+        width: fit-content
+        height: auto
+        position: absolute
+        top: 100%
+        right: 0
+        
+        ul
+            margin: 0
+            padding: 0
+            list-style-type: none
+
+            a
+                padding: 1rem 2rem
+                border-radius: 0.5rem
+                overflow: hidden
+                display: flex
+                align-items: center
+                gap: 1rem
+                .flagContainer
+                    position: relative
+                    >svg
+                        height: 20px
+                &:hover, &.active, &:focus
+                    color: currentColor
+                    background: #018cc388
+                    cursor: pointer
 
 .langList
     ul

@@ -1,0 +1,61 @@
+.container
+    background: #173fac00
+    display: flex
+    align-items: center
+    border-radius: 5px
+    color: #fff
+    font-size: 1.5rem
+    position: relative
+    &:hover
+        .langOptions
+            display: block
+
+    button
+        background: transparent
+        border: 0
+        cursor: pointer
+        transition: all 0.1s ease-in-out
+        &:hover
+            transform: scale(1.05)
+
+        div
+            display: flex
+            align-items: center
+            gap: 0.5rem
+            svg
+                height: 20px
+
+        span
+            text-transform: uppercase
+
+    .langOptions
+        width: fit-content
+        height: auto
+        display: none
+        background: #2c434c
+        border: 1px solid #01C38E
+        border-radius: 0.5rem
+        position: absolute
+        top: 110%
+        right: 0
+        overflow: hidden
+        
+        ul
+            margin: 0
+            padding: 0
+            list-style-type: none
+
+            a
+                padding: 0.5rem 1rem
+                display: flex
+                align-items: center
+                gap: 1rem
+                font-size: 1rem
+                .flagContainer
+                    position: relative
+                    svg
+                        height: 20px
+                &:hover, &.active, &:focus
+                    color: currentColor
+                    background: #018cc388
+                    cursor: pointer
