@@ -6,6 +6,7 @@ import { AiFillInstagram } from 'react-icons/ai'
 import { FaFacebookF } from 'react-icons/fa'
 import Link from 'next/link';
 import LangSelector from 'components/LangSelector';
+import Image from 'next/image';
 
 export default function LandingLayout({ children, onlyTranslate = false, logo = null }) {
     const [isNavbarBlured, setIsNavarBlured] = useState(false)
@@ -41,7 +42,10 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
     return <div className={styles.container}>
         <div className={`${styles.navbar} ${isNavbarBlured ? styles.blur : ''}`}>
             <div className={styles.logoContainer}>
-                {!onlyTranslate && logo}
+                {/* {!onlyTranslate && logo} */}
+                <div className={styles.logo}>
+                    <Image src='/assets/images/logo.png' fill />
+                </div>
             </div>
             <div className={styles.navbarItems}>
                 <LangSelector onChange={handleLanguageChange} />
