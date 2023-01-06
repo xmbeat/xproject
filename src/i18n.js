@@ -32,7 +32,9 @@ const resources = {
             "email-desc": "Your email address here",
             "confirm": "Confirm",
             "start-now": "Start now",
-            "marketplace": "Marketplace"
+            "marketplace": "Marketplace",
+            "explore": "Explore the world",
+            "popular": "Popular Articles"
         }
     },
     es: {
@@ -62,7 +64,9 @@ const resources = {
             "email-desc": "Tu email aquí",
             "confirm": "Confirmar",
             "start-now": "Empezar ahora",
-            "marketplace": "Marketplace"
+            "marketplace": "Marketplace",
+            "explore": "Explora el mundo",
+            "popular": "Articulos Populares"
         }
     },
     pt: {
@@ -92,7 +96,9 @@ const resources = {
             "email-desc": "Seu e-mail aqui",
             "confirm": "Confirmar",
             "start-now": "Comece agora",
-            "marketplace": "Mercado"
+            "marketplace": "Mercado",
+            "explore": "Explorar o mundo",
+            "popular": "Artigos em alta"
         }
     },
     kr: {
@@ -122,7 +128,9 @@ const resources = {
             "email-desc": "귀하의 이메일 주소",
             "confirm": "확인",
             "start-now": "지금 시작",
-            "marketplace": "시장"
+            "marketplace": "시장",
+            "explore": "세계를 탐험하다",
+            "popular": "유행하는 기사"
         }
     },
     vi: {
@@ -152,7 +160,9 @@ const resources = {
             "email-desc": "Địa chỉ email của bạn ở đây",
             "confirm": "Xác nhận",
             "start-now": "Bắt đầu ngay",
-            "marketplace": "chợ"
+            "marketplace": "chợ",
+            "explore": "Khám phá thế giới",
+            "popular": "Bài viết phổ biến"
         }
     }
 };

@@ -17,7 +17,7 @@ export default function Scene() {
 
     useEffect(()=>{
         let listener = ()=>{
-            console.log(document.documentElement.scrollTop)
+            // console.log(document.documentElement.scrollTop)
             for (var i = 0; i < cameraPositions.length; i++){
                 var min = cameraPositions[i].scrollPos[0]
                 var max = cameraPositions[i].scrollPos[1]
