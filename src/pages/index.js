@@ -16,6 +16,8 @@ import LandingLayout from 'components/layout/LandingLayout'
 import { useTranslation } from 'react-i18next'
 import Modal from 'components/Modal/modal'
 import News from 'components/news_section/news'
+import VideoCarrousel from 'components/VideoCarrousel/VideoCarrousel'
+import AboutLandian from 'components/aboutLandian/AboutLandian'
 export default function Home() {
   const { t } = useTranslation()
   const [showPlayer, setShowPlayer] = useState(false)
@@ -76,6 +78,8 @@ export default function Home() {
           <section className={`${styles.fixedSize}`}>
             <News/>
           </section>
+          <VideoCarrousel/>
+          <AboutLandian/>
 
           <section className={styles.adaptativeSize}>
             <div className={styles.adaptativeContent}>
