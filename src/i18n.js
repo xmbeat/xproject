@@ -7,8 +7,8 @@ import { initReactI18next } from "react-i18next";
 const resources = {
     en: {
         translation: {
-            "connect-wallet": "Connect Wallet",
-            "connect": "Connect",
+            "connect-wallet": "Claim Plots",
+            "connect": "Claim",
             "welcome": "For all users who want to pay off their accumulated pending, review the information described. This website is intended to offer an exchange opportunity, obtaining your digital assets that will be your property.",
             "first-step-title": "Watch the video",
             "first-step-desc": "Explanation of the necessary information you need to understand",
@@ -39,8 +39,8 @@ const resources = {
     },
     es: {
         translation: {
-            "connect-wallet": "Conectar Wallet",
-            "connect": "Conectar",
+            "connect-wallet": "Reclamar Parcelas",
+            "connect": "Reclamar",
             "welcome": "Para todos los usuarios que desean saldar el pendiente que tienen acumulado revisen la información descrita. Este sitio web tiene como finalidad ofrecer una oportunidad de intercambio, obteniendo tu activos digitales que serán de tu propiedad.",
             "first-step-title": "Ver el video",
             "first-step-desc": "Explicación de la información necesaria que necesitas entender",
@@ -71,8 +71,8 @@ const resources = {
     },
     pt: {
         translation: {
-            "connect-wallet": "Conectar Carteira",
-            "connect": "Conectar",
+            "connect-wallet": "Reivindicar Parcelas",
+            "connect": "Reivindicar",
             "welcome": "Para todos os utilizadores que pretendam liquidar as pendências que acumularam, revejam a informação descrita. O objetivo deste site é oferecer uma oportunidade de troca, obtendo seus ativos digitais que serão de sua propriedade.",
             "first-step-title": "Assista o vídeo",
             "first-step-desc": "Explicação das informações necessárias que você precisa entender",
@@ -103,8 +103,8 @@ const resources = {
     },
     kr: {
         translation: {
-            "connect-wallet": "지갑 연결",
-            "connect": "연결",
+            "connect-wallet": "클레임 플롯",
+            "connect": "주장하다",
             "welcome": "누적한 미결제 금액을 지불하려는 모든 사용자에게 설명된 정보를 검토하십시오. 이 웹사이트는 귀하의 재산이 될 디지털 자산을 획득하여 교환 기회를 제공하기 위한 것입니다.",
             "first-step-title": "동영상 보기",
             "first-step-desc": "이해해야 하는 필수 정보에 대한 설명",
@@ -135,8 +135,8 @@ const resources = {
     },
     vi: {
         translation: {
-            "connect-wallet": "Kết nối ví",
-            "connect": "Kết nối",
+            "connect-wallet": "Yêu cầu lô đất",
+            "connect": "Yêu cầu",
             "welcome": "Đối với tất cả người dùng muốn thanh toán số tiền tích lũy đang chờ xử lý của họ, hãy xem lại thông tin được mô tả. Trang web này nhằm cung cấp cơ hội trao đổi, lấy tài sản kỹ thuật số sẽ là tài sản của bạn.",
             "first-step-title": "Xem video",
             "first-step-desc": "Giải thích thông tin cần thiết bạn cần hiểu",
