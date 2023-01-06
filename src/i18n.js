@@ -31,7 +31,9 @@ const resources = {
             "email": "Email",
             "email-desc": "Your email address here",
             "confirm": "Confirm",
-            "start-now": "Start now"
+            "start-now": "Start now",
+            "explore": "Explore the world",
+            "popular": "Popular Articles"
         }
     },
     es: {
@@ -60,7 +62,9 @@ const resources = {
             "email": "Email",
             "email-desc": "Tu email aquí",
             "confirm": "Confirmar",
-            "start-now": "Empezar ahora"
+            "start-now": "Empezar ahora",
+            "explore": "Explora el mundo",
+            "popular": "Articulos Populares"
         }
     },
     pt: {
@@ -89,7 +93,9 @@ const resources = {
             "email": "E-mail",
             "email-desc": "Seu e-mail aqui",
             "confirm": "Confirmar",
-            "start-now": "Comece agora"
+            "start-now": "Comece agora",
+            "explore": "Explorar o mundo",
+            "popular": "Artigos em alta"
         }
     },
     kr: {
@@ -118,7 +124,9 @@ const resources = {
             "email": "이메일",
             "email-desc": "귀하의 이메일 주소",
             "confirm": "확인",
-            "start-now": "지금 시작"
+            "start-now": "지금 시작",
+            "explore": "세계를 탐험하다",
+            "popular": "유행하는 기사"
         }
     }
 };

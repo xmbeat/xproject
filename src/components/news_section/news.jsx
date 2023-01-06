@@ -1,11 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import styles from './styles.module.sass'
 import { motion } from 'framer-motion'
 
 import { zoom, side } from 'effects/effects'
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useTranslation } from 'react-i18next';
 export default function News() {
+    const carouselContainer = useRef()
+    const cardStyle = useRef({})
+    const {t} = useTranslation()
+
     const items = useMemo(() => {
         return [{
             title: 'Criptomonedas, la divisa del metaverso',
@@ -21,7 +28,7 @@ export default function News() {
             href: "https://www.crypto-news-flash.com/landian-metaverse-sells-out-tier-1/",
             image: 'https://www.crypto-news-flash.com/wp-content/uploads/2022/09/unnamed-26.jpg',
             tldr: 'Selling more than 719,000 lots and minting over 380,000 NFT’s in four days, completing the largest NFT transaction ever! '
-        }, 
+        },
         {
             title: 'Landian Metaverse Live Auction Debuts with Record-Breaking NFT Sales',
             subtitle: 'Global News Wire',
@@ -46,42 +53,80 @@ export default function News() {
             image: 'https://virtualrealitytimes.com/wp-content/uploads/2022/09/Landian.png',
             tldr: 'After three years in stealth mode, the Landian Metaverse has launched in the past week with a Tier 1 live auction which had record-breaking NFT sales, notching up 98,463,595 square meters of land ...'
         }
-    ]
+        ]
     }, [])
+
+    const [pages, setPages] = useState([])
 
     const formatDate = useCallback((date) => {
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         return date.toLocaleDateString('en-US', options)
     }, [])
 
-    const [currentNew, setCurrentNew] = useState(items[0]);
+    useEffect(() => {
+        var listener = () => {
+            if (carouselContainer.current) {
+                var rect = carouselContainer.current.getBoundingClientRect()
+                var maxCardWidth = 400
+                var padding = 30
+                var cardsPerPage = Math.ceil(rect.width / maxCardWidth)
+                var cardWidth = (rect.width - (padding * (cardsPerPage - 1))) / cardsPerPage
+                var pageCount = Math.ceil(items.length / cardsPerPage)
+                cardStyle.current  = {width: cardWidth}
+                var pages = []
+                for (var i = 0; i < pageCount; i++) {
+                    var children = []
+                    var start = i * cardsPerPage
+                    for (var j = start; j < start + cardsPerPage && j < items.length; j++) {
+                        children.push(items[j])
+                    }
+                    pages.push({
+                        items: children
+                    })
+                }
+                setPages(pages)
+            }
+        }
+        window.addEventListener('resize', listener)
+        listener()
+        return () => {
+            window.removeEventListener('resize', listener)
+        }
+    }, [])
+
 
     return <div className={styles.container}>
-        <div className={styles.newsFull}>
-            {
-                items.map((item, index)=><div className={styles.newsCard}>
-                <div className={styles.newsImage}>
-                    <Image alt='Image' src={item.image} style={{ objectFit: 'cover' }} fill='true' />
-                </div>
-                <div className={styles.newsBody}>
-                    <div className={styles.newsDate}>{formatDate(item.date)}</div>
-                    <h2>{item.title}</h2>
-                    <h3>{item.subtitle}</h3>
-                    <p>{item.tldr}</p>
-                    <Link className={styles.linkButton} href={item.href}>
-                        Read more
-                    </Link>
-                </div>
-            </div>)
-            }
-            
-           
+        <h1>{t('explore')} <span>{t('popular')}</span></h1>
+        <div ref={carouselContainer} className={styles.newsMobile}>
+            <Carousel showArrows={true} showThumbs={false} autoPlay={true} infiniteLoop={true}>
+                {
+                    pages.map((page, index) => <div key={index} className={styles.page}>
+                        {
+                            page.items.map((item, index) =>
+                                <div  key={index} className={styles.newsCard} style={cardStyle.current}>
+                                    <div className={styles.newsImage}>
+                                        <Image alt='Image' src={item.image} style={{ objectFit: 'cover' }} fill='true' />
+                                    </div>
+
+                                    <div className={styles.newsBody}>
+                                        <div className={styles.newsDate}>{formatDate(item.date)}</div>
+                                        <h2>{item.title}</h2>
+                                        <h3>{item.subtitle}</h3>
+                                        <p>{item.tldr}</p>
+                                        <Link className={styles.linkButton} href={item.href}>
+                                            Read more
+                                        </Link>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </div>)
+                }
+
+            </Carousel>
+
+
         </div>
-        <div className={styles.pager}>
-            {items.map((item, index) =>
-                <span key={index} className={`${currentNew == item ? styles.selected : ''}`}>
-                </span>
-            )}
-        </div>
+
     </div>
 }
