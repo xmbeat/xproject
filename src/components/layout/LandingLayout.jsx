@@ -1,16 +1,14 @@
 import { useCallback, useEffect, useState } from 'react'
-import { MdLanguage } from 'react-icons/md'
-import Flags from 'country-flag-icons/react/3x2'
-import Modal from 'components/Modal/modal';
 import styles from './LandingLayout.module.sass';
 import { useTranslation } from 'react-i18next';
 
 import { AiFillInstagram } from 'react-icons/ai'
 import { FaFacebookF } from 'react-icons/fa'
 import Link from 'next/link';
+import LangSelector from 'components/LangSelector';
+import Image from 'next/image';
 
 export default function LandingLayout({ children, onlyTranslate = false, logo = null }) {
-    const [modalVisibility, setModalVisibility] = useState(false);
     const [isNavbarBlured, setIsNavarBlured] = useState(false)
     const {t, i18n} = useTranslation()
     useEffect(() => {
@@ -40,34 +38,17 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
         localStorage.setItem('language', locale)
 
     }, [])
+
     return <div className={styles.container}>
-        <Modal show={modalVisibility} onClose={() => setModalVisibility(false)} title={'Select your language'}>
-            <div className={styles.langList} onClick={() => setModalVisibility(false)}>
-                <ul>
-                    <li >
-                        <Link href="/" onClick={() => handleLanguageChange('en')}>  <div className={styles.flagContainer}><Flags.GB title="British" /></div> English </Link>
-                    </li>
-                    <li>
-                        <Link href="/" onClick={() => handleLanguageChange('es')}>   <div className={styles.flagContainer}><Flags.ES title="Spain" /> </div> Español </Link>
-                    </li>
-                    <li>
-                        <Link href="/" onClick={() => handleLanguageChange('pt')}>  <div className={styles.flagContainer}> <Flags.BR title="Brazil" /> </div> Português </Link>
-                    </li>
-                    <li>
-                        <Link href="/" onClick={() => handleLanguageChange('kr')}>   <div className={styles.flagContainer}><Flags.KR title="Korean" /> </div> 한국어 </Link>
-                    </li>
-                   
-                </ul>
-            </div>
-        </Modal>
         <div className={`${styles.navbar} ${isNavbarBlured ? styles.blur : ''}`}>
             <div className={styles.logoContainer}>
-                {!onlyTranslate && logo}
+                {/* {!onlyTranslate && logo} */}
+                <div className={styles.logo}>
+                    <Image src='/assets/images/logo.png' fill />
+                </div>
             </div>
             <div className={styles.navbarItems}>
-                <div className={styles.lang} onClick={() => setModalVisibility(true)} >
-                    <MdLanguage />
-                </div>
+                <LangSelector onChange={handleLanguageChange} />
                 {!onlyTranslate &&
                     <Link href="/connect" className={styles.desktopOnly}> 
                         <span className={styles.button}>{t('connect-wallet')}</span>
@@ -90,7 +71,10 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
                 {t('copyright')}
             </div>
             <div className={styles.imageContainer}>
-                {logo}
+                {/* {logo} */}
+                <div className={styles.logo}>
+                    <Image src='/assets/images/logo.png' fill />
+                </div>
                 {/* <div className={styles.socials}>
                     <Link href='#'>
                         <FaFacebookF />

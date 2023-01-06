@@ -26,11 +26,11 @@ export default function Login() {
                 transition={{ duration: 0.5 }}
                 >
                     <div>
-                        <h1>
-                            <span>x </span>project
-                        </h1>
+                        <div className={styles.logo}>
+                            <Image src='/assets/images/logo.png' fill />
+                        </div>
                         <h2>
-                            Welcome to X project
+                            Welcome
                         </h2>
                     </div>
 

@@ -7,8 +7,8 @@ import { initReactI18next } from "react-i18next";
 const resources = {
     en: {
         translation: {
-            "connect-wallet": "Connect Wallet",
-            "connect": "Connect",
+            "connect-wallet": "Claim Plots",
+            "connect": "Claim",
             "welcome": "For all users who want to pay off their accumulated pending, review the information described. This website is intended to offer an exchange opportunity, obtaining your digital assets that will be your property.",
             "first-step-title": "Watch the video",
             "first-step-desc": "Explanation of the necessary information you need to understand",
@@ -32,14 +32,15 @@ const resources = {
             "email-desc": "Your email address here",
             "confirm": "Confirm",
             "start-now": "Start now",
+            "marketplace": "Marketplace",
             "explore": "Explore the world",
             "popular": "Popular Articles"
         }
     },
     es: {
         translation: {
-            "connect-wallet": "Conectar Wallet",
-            "connect": "Conectar",
+            "connect-wallet": "Reclamar Parcelas",
+            "connect": "Reclamar",
             "welcome": "Para todos los usuarios que desean saldar el pendiente que tienen acumulado revisen la información descrita. Este sitio web tiene como finalidad ofrecer una oportunidad de intercambio, obteniendo tu activos digitales que serán de tu propiedad.",
             "first-step-title": "Ver el video",
             "first-step-desc": "Explicación de la información necesaria que necesitas entender",
@@ -63,14 +64,15 @@ const resources = {
             "email-desc": "Tu email aquí",
             "confirm": "Confirmar",
             "start-now": "Empezar ahora",
+            "marketplace": "Marketplace",
             "explore": "Explora el mundo",
             "popular": "Articulos Populares"
         }
     },
     pt: {
         translation: {
-            "connect-wallet": "Conectar Carteira",
-            "connect": "Conectar",
+            "connect-wallet": "Reivindicar Parcelas",
+            "connect": "Reivindicar",
             "welcome": "Para todos os utilizadores que pretendam liquidar as pendências que acumularam, revejam a informação descrita. O objetivo deste site é oferecer uma oportunidade de troca, obtendo seus ativos digitais que serão de sua propriedade.",
             "first-step-title": "Assista o vídeo",
             "first-step-desc": "Explicação das informações necessárias que você precisa entender",
@@ -94,14 +96,15 @@ const resources = {
             "email-desc": "Seu e-mail aqui",
             "confirm": "Confirmar",
             "start-now": "Comece agora",
+            "marketplace": "Mercado",
             "explore": "Explorar o mundo",
             "popular": "Artigos em alta"
         }
     },
     kr: {
         translation: {
-            "connect-wallet": "지갑 연결",
-            "connect": "연결",
+            "connect-wallet": "클레임 플롯",
+            "connect": "주장하다",
             "welcome": "누적한 미결제 금액을 지불하려는 모든 사용자에게 설명된 정보를 검토하십시오. 이 웹사이트는 귀하의 재산이 될 디지털 자산을 획득하여 교환 기회를 제공하기 위한 것입니다.",
             "first-step-title": "동영상 보기",
             "first-step-desc": "이해해야 하는 필수 정보에 대한 설명",
@@ -125,8 +128,41 @@ const resources = {
             "email-desc": "귀하의 이메일 주소",
             "confirm": "확인",
             "start-now": "지금 시작",
+            "marketplace": "시장",
             "explore": "세계를 탐험하다",
             "popular": "유행하는 기사"
+        }
+    },
+    vi: {
+        translation: {
+            "connect-wallet": "Yêu cầu lô đất",
+            "connect": "Yêu cầu",
+            "welcome": "Đối với tất cả người dùng muốn thanh toán số tiền tích lũy đang chờ xử lý của họ, hãy xem lại thông tin được mô tả. Trang web này nhằm cung cấp cơ hội trao đổi, lấy tài sản kỹ thuật số sẽ là tài sản của bạn.",
+            "first-step-title": "Xem video",
+            "first-step-desc": "Giải thích thông tin cần thiết bạn cần hiểu",
+            "second-step-title": "Kết nối Ví",
+            "second-step-desc": "Đây là ví của bạn, nơi bạn sẽ nhận tài sản kỹ thuật số của mình.",
+            "third-step-title ": "Nhận tài sản",
+            "third-step-desc": "Sau khi ký tuyên bố từ chối trách nhiệm, bạn sẽ có thể nhận được tài sản kỹ thuật số của mình",
+            "metaverse-title": "<span>Metaverse</span> là gì?",
+            "metaverse-desc": "<p>Metaverse là một khái niệm về vũ trụ trực tuyến 3D liên tục kết hợp nhiều không gian ảo khác nhau. Bạn có thể coi đây là phiên bản tương lai của internet. Metaverse sẽ cho phép người dùng làm việc, gặp gỡ , chơi và giao lưu cùng nhau trong những không gian 3D này</p><p>Thị trường kinh tế cho Metaverse sẽ phát triển mạnh mẽ vào năm 2030. Trong thương mại điện tử, người ta ước tính rằng tác động sẽ nằm trong khoảng từ 2 đến 2,6 nghìn tỷ đô la, trong khi đó trong lĩnh vực giáo dục, nó có thể tạo ra tới 270.000 triệu đô la và trong thị trường trò chơi điện tử, tác động của nó có thể lên tới 125.000 triệu đô la.</p>",
+            "landian-title": " <span>Landian</span> là gì?",
+            "landiant-desc": "<p>Metaverse siêu thực tế nhất từ trước đến nay, được kết nối với chuỗi khối và thân thiện với web 3.0.</p><p>LANDIAN đã phá kỷ lục doanh số bán hàng vào ngày ra mắt, bán hết sạch chỉ trong một ngày nữa hơn 90 nghìn NFT.</p>",
+            "disclaimer-title": "Tuyên bố từ chối trách nhiệm",
+            "copyright": "dự án x @2022 Bảo lưu mọi quyền",
+            "user": "Người dùng",
+            "balance-due": "Số Dư Đến Hạn",
+            "land-to-receive": "Đất nhận",
+            "confirm-transaction": "Xác nhận giao dịch",
+            "wallet": "Ví",
+            "wallet-desc": "Địa chỉ ví của bạn ở đây",
+            "email": "thư điện tử",
+            "email-desc": "Địa chỉ email của bạn ở đây",
+            "confirm": "Xác nhận",
+            "start-now": "Bắt đầu ngay",
+            "marketplace": "chợ",
+            "explore": "Khám phá thế giới",
+            "popular": "Bài viết phổ biến"
         }
     }
 };
