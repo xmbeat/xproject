@@ -139,7 +139,8 @@ export default function Home() {
           <AboutLandian/>
 
           {/* ARTICLES CAROUSEL */}
-          <section className={`${styles.fixedSize}`}>
+          <section className={`${styles.adaptativeSize}`}>
+
             <News/>
           </section>
 

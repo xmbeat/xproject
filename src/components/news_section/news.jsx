@@ -73,7 +73,11 @@ export default function News() {
         var listener = () => {
             if (carouselContainer.current) {
                 var rect = carouselContainer.current.getBoundingClientRect()
-                setItemsPerPage(Math.max(1, Math.ceil(rect.width / 400)))
+                var itemsPerPage = rect.width / 300
+                if (itemsPerPage >= 2){
+                    itemsPerPage = Math.ceil(itemsPerPage)
+                }
+                setItemsPerPage(itemsPerPage)
             }
         }
         window.addEventListener('resize', listener)
