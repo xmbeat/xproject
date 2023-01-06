@@ -23,11 +23,7 @@ export default function Home() {
   const { t } = useTranslation()
   const [showPlayer, setShowPlayer] = useState(false)
   return (
-    <LandingLayout
-      // logo={
-      //   <h1 className={styles.logo}><span>x</span> project</h1>
-      // }
-    >
+    <LandingLayout>
       <div>
         <Head>
           <title>X Project</title>
@@ -53,16 +49,9 @@ export default function Home() {
         </Modal>
 
         <main className={styles.home}>
+          {/* HERO */}
           <section className={`${styles.fixedSize} ${styles.first}`}>
             <div className={styles.centeredContent}>
-              {/* <motion.h1
-                variants={side}
-                initial="hidden"
-                whileInView="visible"
-                className={styles.title}
-              >
-                <span>x</span> project
-              </motion.h1> */}
               <motion.div
                 variants={side}
                 initial="hidden"
@@ -86,13 +75,8 @@ export default function Home() {
               </div>
             </div>
           </section>
-          
-          <section className={`${styles.fixedSize}`}>
-            <News/>
-          </section>
-          <VideoCarrousel/>
-          <AboutLandian/>
 
+          {/* WHAT IS METAVERSE? */}
           <section className={styles.adaptativeSize}>
             <div className={styles.adaptativeContent}>
               <div className={styles.imageWithText}>
@@ -121,6 +105,7 @@ export default function Home() {
             </div>
           </section>
 
+          {/* WHAT IS LANDIAN? */}
           <section className={styles.fixedSize}>
             <div className={styles.centeredContent}
             >
@@ -147,6 +132,18 @@ export default function Home() {
             </div>
           </section>
 
+          {/* VIDEO CAROUSEL */}
+          <VideoCarrousel/>
+
+          {/* ABOUT LANDIAN */}
+          <AboutLandian/>
+
+          {/* ARTICLES CAROUSEL */}
+          <section className={`${styles.fixedSize}`}>
+            <News/>
+          </section>
+
+          {/* TUTORIAL */}
           <section className={`${styles.adaptativeSize} ${styles.third}`}>
             <div className={styles.adaptativeContent}>
               <h1>Tutorial</h1>
@@ -184,7 +181,10 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          {/* MARKETPLACE */}
           <Marketplace />
+          
         </main>
       </div>
     </LandingLayout>
