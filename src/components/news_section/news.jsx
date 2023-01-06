@@ -5,13 +5,18 @@ import styles from './styles.module.sass'
 import { motion } from 'framer-motion'
 
 import { zoom, side } from 'effects/effects'
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import Swiper JS
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {Pagination, Autoplay, Navigation} from 'swiper';
+import 'swiper/css';
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 import { useTranslation } from 'react-i18next';
 export default function News() {
     const carouselContainer = useRef()
     const cardStyle = useRef({})
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     const items = useMemo(() => {
         return [{
@@ -56,76 +61,88 @@ export default function News() {
         ]
     }, [])
 
-    const [pages, setPages] = useState([])
 
     const formatDate = useCallback((date) => {
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         return date.toLocaleDateString('en-US', options)
     }, [])
 
-    useEffect(() => {
-        var listener = () => {
-            if (carouselContainer.current) {
-                var rect = carouselContainer.current.getBoundingClientRect()
-                var maxCardWidth = 400
-                var padding = 30
-                var cardsPerPage = Math.ceil(rect.width / maxCardWidth)
-                var cardWidth = (rect.width - (padding * (cardsPerPage - 1))) / cardsPerPage
-                var pageCount = Math.ceil(items.length / cardsPerPage)
-                cardStyle.current  = {width: cardWidth}
-                var pages = []
-                for (var i = 0; i < pageCount; i++) {
-                    var children = []
-                    var start = i * cardsPerPage
-                    for (var j = start; j < start + cardsPerPage && j < items.length; j++) {
-                        children.push(items[j])
-                    }
-                    pages.push({
-                        items: children
-                    })
-                }
-                setPages(pages)
-            }
-        }
-        window.addEventListener('resize', listener)
-        listener()
-        return () => {
-            window.removeEventListener('resize', listener)
-        }
+    // useEffect(() => {
+    //     var listener = () => {
+    //         if (carouselContainer.current) {
+    //             var rect = carouselContainer.current.getBoundingClientRect()
+    //             var maxCardWidth = 400
+    //             var padding = 30
+    //             var cardsPerPage = Math.ceil(rect.width / maxCardWidth)
+    //             var cardWidth = (rect.width - (padding * (cardsPerPage - 1))) / cardsPerPage
+    //             var pageCount = Math.ceil(items.length / cardsPerPage)
+    //             cardStyle.current  = {width: cardWidth}
+    //             var pages = []
+    //             for (var i = 0; i < pageCount; i++) {
+    //                 var children = []
+    //                 var start = i * cardsPerPage
+    //                 for (var j = start; j < start + cardsPerPage && j < items.length; j++) {
+    //                     children.push(items[j])
+    //                 }
+    //                 pages.push({
+    //                     items: children
+    //                 })
+    //             }
+    //             setPages(pages)
+    //         }
+    //     }
+    //     window.addEventListener('resize', listener)
+    //     listener()
+    //     return () => {
+    //         window.removeEventListener('resize', listener)
+    //     }
+    // }, [])
+
+    const handleSlideChange = useCallback((swiper)=>{
+        console.log(swiper.activeIndex)
     }, [])
-
-
     return <div className={styles.container}>
         <h1>{t('explore')} <span>{t('popular')}</span></h1>
         <div ref={carouselContainer} className={styles.newsMobile}>
-            <Carousel showArrows={true} showThumbs={false} autoPlay={true} infiniteLoop={true}>
+            <Swiper 
+                className={styles.swiper}
+                slidesPerView={3} 
+                spaceBetween={30} 
+                centeredSlides={true}
+                navigation={true}
+                autoHeight={false}
+                initialSlide={2}
+                onSlideChange={handleSlideChange}
+                autoplay={{
+                    delay: 25000,
+                    disableOnInteraction: false,
+                  }}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[Pagination, Autoplay, Navigation]} >
                 {
-                    pages.map((page, index) => <div key={index} className={styles.page}>
-                        {
-                            page.items.map((item, index) =>
-                                <div  key={index} className={styles.newsCard} style={cardStyle.current}>
-                                    <div className={styles.newsImage}>
-                                        <Image alt='Image' src={item.image} style={{ objectFit: 'cover' }} fill='true' />
-                                    </div>
-
-                                    <div className={styles.newsBody}>
-                                        <div className={styles.newsDate}>{formatDate(item.date)}</div>
-                                        <h2>{item.title}</h2>
-                                        <h3>{item.subtitle}</h3>
-                                        <p>{item.tldr}</p>
-                                        <Link className={styles.linkButton} href={item.href}>
-                                            Read more
-                                        </Link>
-                                    </div>
+                    items.map((item, index) =>
+                        <SwiperSlide key={index} className={styles.slide} >
+                            <div className={styles.newsCard} style={cardStyle.current}>
+                                <div className={styles.newsImage}>
+                                    <Image alt='Image' src={item.image} style={{ objectFit: 'cover' }} fill='true' />
                                 </div>
-                            )
-                        }
-                    </div>)
+
+                                <div className={styles.newsBody}>
+                                    <div className={styles.newsDate}>{formatDate(item.date)}</div>
+                                    <h2>{item.title}</h2>
+                                    <h3>{item.subtitle}</h3>
+                                    <p>{item.tldr}</p>
+                                    <Link className={styles.linkButton} href={item.href}>
+                                        Read more
+                                    </Link>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    )
                 }
-
-            </Carousel>
-
-
+            </Swiper>
         </div>
 
     </div>
