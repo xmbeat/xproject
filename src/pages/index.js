@@ -24,9 +24,9 @@ export default function Home() {
   const [showPlayer, setShowPlayer] = useState(false)
   return (
     <LandingLayout
-      logo={
-        <h1 className={styles.logo}><span>x</span> project</h1>
-      }
+      // logo={
+      //   <h1 className={styles.logo}><span>x</span> project</h1>
+      // }
     >
       <div>
         <Head>
@@ -55,11 +55,22 @@ export default function Home() {
         <main className={styles.home}>
           <section className={`${styles.fixedSize} ${styles.first}`}>
             <div className={styles.centeredContent}>
-              <motion.h1
+              {/* <motion.h1
                 variants={side}
                 initial="hidden"
                 whileInView="visible"
-                className={styles.title}><span>x</span> project</motion.h1>
+                className={styles.title}
+              >
+                <span>x</span> project
+              </motion.h1> */}
+              <motion.div
+                variants={side}
+                initial="hidden"
+                whileInView="visible"
+                className={styles.logo}
+              >
+                  <Image src='/assets/images/logo.png' fill />
+              </motion.div>
               <div className={styles.text}>
                 <motion.p
                   variants={zoom}

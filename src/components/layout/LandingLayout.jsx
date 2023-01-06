@@ -71,7 +71,10 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
                 {t('copyright')}
             </div>
             <div className={styles.imageContainer}>
-                {logo}
+                {/* {logo} */}
+                <div className={styles.logo}>
+                    <Image src='/assets/images/logo.png' fill />
+                </div>
                 {/* <div className={styles.socials}>
                     <Link href='#'>
                         <FaFacebookF />
