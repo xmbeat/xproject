@@ -13,18 +13,19 @@ const VideoCarrousel = () => {
   const [counter, setCounter] = useState(0);
   const [nextVideo, setNextVideo] = useState(false);
   const handleBack = () => {
-    setCounter((counter) => counter - 1);
     setNextVideo(true);
     setTimeout(() => {
       setNextVideo(false);
+      setCounter((counter) => counter - 1);
     }, 750);
   };
   const handleNext = () => {
-    setCounter((counter) => counter + 1);
     setNextVideo(true);
     setTimeout(() => {
       setNextVideo(false);
+      setCounter((counter) => counter + 1);
     }, 750);
+    
   };
 
   return (

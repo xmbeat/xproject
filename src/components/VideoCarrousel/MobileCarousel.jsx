@@ -6,8 +6,10 @@ import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ImYoutube2 } from "react-icons/im";
+import { useTranslation } from "react-i18next";
 
 const MobileCarousel = () => {
+  const {t} = useTranslation();
   const handleSlideChange = useRef();
   return (
     <section className={styles.MobileCarousel}>
@@ -42,7 +44,7 @@ const MobileCarousel = () => {
                   <div>
                     <Link href={item.url} className={styles.button}>
                       <ImYoutube2 className={styles.yt} />
-                      <span>Watch on Youtube</span>
+                      <span>{t("watch")}</span>
                     </Link>
                    
                   </div>
