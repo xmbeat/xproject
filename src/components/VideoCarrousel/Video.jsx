@@ -1,19 +1,15 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
 import styles from "./VideoCarrousel.module.sass";
-import zoom from "effects/effects";
 
 const Video = ({ url }) => {
   return (
-    <motion.div
-      variants={zoom}
-      initial="zoomOut"
-      whileInView="visible"
-      className={styles.videoContainer}
-    >
-      <div className={styles.container}>
+    <div className={styles.videoContainer}>
+      <div
+        className={styles.container}
+        onClick={() => setVideo((video) => !video)}
+      >
         <picture>
-          <img src={url.image} />
+          <img src={url.image} alt={url.image}/>
         </picture>
       </div>
       <div className={styles.text}>
@@ -24,7 +20,7 @@ const Video = ({ url }) => {
           </Link>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

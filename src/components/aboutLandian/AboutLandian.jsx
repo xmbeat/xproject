@@ -3,7 +3,8 @@ import Lottie from "react-lottie";
 import * as animationData from "../../../public/lotties/eyes.json";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { motion } from "framer-motion";
+import { zoom, side } from 'effects/effects'
 
 const AboutLandian = () => {
   const [more, setMore] = useState(false);
@@ -23,12 +24,18 @@ const AboutLandian = () => {
   };
 
   return (
-    <section className={styles.AboutLandian} style={{ marginBottom: more ? "30rem" : 0 }}>
+    <section
+      className={styles.AboutLandian}
+      style={{ marginBottom: more ? "35rem" : "5rem" }}
+    >
       <div className={styles.about}>
         <picture>
-          <img src="/assets/images/landian_d.png" className={styles.image} />
+          <img src="/assets/images/landian_d.png" alt="landian" className={styles.image} />
         </picture>
-        <div className={styles.text} style={{ marginTop: more ? "25rem" : "0" }}>
+        <div
+          className={styles.text}
+          style={{ marginTop: more ? "30rem" : "0" }}
+        >
           <h2>About Landian</h2>
           <p>
             Landian exists so that people, businesses, organizations, and
@@ -43,7 +50,7 @@ const AboutLandian = () => {
             easier to navigate.
           </p>
           {more && (
-            <div>
+            <motion.div variants={side} initial="hidden" whileInView="visible">
               <p>
                 Rewarding creativity and social interaction is what all great
                 societies have in common. That is why Landian is packed with
@@ -65,7 +72,7 @@ const AboutLandian = () => {
                 emotional responses without the impediments often created by
                 distance, time, money, race, and religion.
               </p>
-            </div>
+            </motion.div>
           )}
           {!more ? (
             <button onClick={viewMore}>... Read more</button>

@@ -16,14 +16,14 @@
     "country-flag-icons": "^1.5.5",
     "framer-motion": "^7.7.2",
     "i18next": "^22.4.3",
-    "react-lottie": "^1.2.3",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^12.1.1",
     "react-icons": "^4.7.1",
-    "react-responsive-carousel": "^3.2.23",
+    "react-lottie": "^1.2.3",
     "sass": "^1.56.2",
+    "swiper": "^8.4.5",
     "three": "^0.146.0"
   }
 }

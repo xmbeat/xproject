@@ -62,7 +62,7 @@ export default function LangSelector({onChange = () => {}}) {
         <div className={styles.container}>
             <button onClick={() => setIsOpen(!isOpen)}>
                 <div>
-                    { currentLang.flag } <span>{ currentLang.code }</span>
+                { currentLang.flag } <span>{ currentLang.code }</span>
                 </div>
             </button>
             <div className={styles.langOptions}>

@@ -19,6 +19,7 @@ import News from 'components/news_section/news'
 import VideoCarrousel from 'components/VideoCarrousel/VideoCarrousel'
 import AboutLandian from 'components/aboutLandian/AboutLandian'
 import Marketplace from 'components/Marketplace'
+import MobileCarousel from 'components/VideoCarrousel/MobileCarousel'
 export default function Home() {
   const { t } = useTranslation()
   const [showPlayer, setShowPlayer] = useState(false)
@@ -58,7 +59,7 @@ export default function Home() {
                 whileInView="visible"
                 className={styles.logo}
               >
-                  <Image src='/assets/images/logo.png' fill />
+                <Image src='/assets/images/logo.png' fill />
               </motion.div>
               <div className={styles.text}>
                 <motion.p
@@ -133,10 +134,17 @@ export default function Home() {
           </section>
 
           {/* VIDEO CAROUSEL */}
-          <VideoCarrousel/>
+          <section className={styles.adaptativeSize}>
+            <VideoCarrousel />
+            <MobileCarousel />
+          </section>
+
 
           {/* ABOUT LANDIAN */}
-          <AboutLandian/>
+          <section className={styles.adaptativeSize}>
+            <AboutLandian />
+          </section>
+
 
           {/* ARTICLES CAROUSEL */}
           <section className={`${styles.fixedSize}`}>
@@ -184,7 +192,7 @@ export default function Home() {
 
           {/* MARKETPLACE */}
           <Marketplace />
-          
+
         </main>
       </div>
     </LandingLayout>
