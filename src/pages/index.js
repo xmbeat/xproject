@@ -19,15 +19,15 @@ import News from 'components/news_section/news'
 import VideoCarrousel from 'components/VideoCarrousel/VideoCarrousel'
 import AboutLandian from 'components/aboutLandian/AboutLandian'
 import Marketplace from 'components/Marketplace'
+import { Parallax } from 'react-scroll-parallax';
+import MobileCarousel from 'components/VideoCarrousel/MobileCarousel'
+
 export default function Home() {
   const { t } = useTranslation()
   const [showPlayer, setShowPlayer] = useState(false)
+
   return (
-    <LandingLayout
-      logo={
-        <h1 className={styles.logo}><span>x</span> project</h1>
-      }
-    >
+    <LandingLayout>
       <div>
         <Head>
           <title>X Project</title>
@@ -53,13 +53,17 @@ export default function Home() {
         </Modal>
 
         <main className={styles.home}>
+          {/* HERO */}
           <section className={`${styles.fixedSize} ${styles.first}`}>
             <div className={styles.centeredContent}>
-              <motion.h1
+              <motion.div
                 variants={side}
                 initial="hidden"
                 whileInView="visible"
-                className={styles.title}><span>x</span> project</motion.h1>
+                className={styles.logo}
+              >
+                <Image src='/assets/images/logo.png' fill />
+              </motion.div>
               <div className={styles.text}>
                 <motion.p
                   variants={zoom}
@@ -69,19 +73,14 @@ export default function Home() {
                   {t('welcome')}
                 </motion.p>
               </div>
-              <div className={styles.play} onClick={() => setShowPlayer(true)}>
+              {/* <div className={styles.play} onClick={() => setShowPlayer(true)}>
 
                 <BsFillPlayFill />
-              </div>
+              </div> */}
             </div>
           </section>
-          
-          <section className={`${styles.fixedSize}`}>
-            <News/>
-          </section>
-          <VideoCarrousel/>
-          <AboutLandian/>
 
+          {/* WHAT IS METAVERSE? */}
           <section className={styles.adaptativeSize}>
             <div className={styles.adaptativeContent}>
               <div className={styles.imageWithText}>
@@ -90,26 +89,29 @@ export default function Home() {
                   initial="zoomOut"
                   whileInView="visible"
                 >
-                  <div className={styles.borderedContainer}>
+                  <div  className={styles.borderedContainer}>
                     <div className={styles.bg}>
                       <Image src="/assets/images/what_is.png" alt="what is: image" style={{ "objectFit": "cover" }} fill="true" />
                     </div>
                   </div>
                 </motion.div>
-                <motion.div className={styles.text}
-                  variants={zoom}
-                  initial="zoomOut"
-                  whileInView="visible"
-                >
-                  <h1 dangerouslySetInnerHTML={{ __html: t('metaverse-title') }}>
+                <Parallax speed={-20} rootMargin= {{ top: 1000, right: 0, bottom: 0, left: 0 }} >
+                  <motion.div className={styles.text}
+                    variants={zoom}
+                    initial="zoomOut"
+                    whileInView="visible"
+                  >
+                    <h1 dangerouslySetInnerHTML={{ __html: t('metaverse-title') }}>
 
-                  </h1>
-                  <div dangerouslySetInnerHTML={{ __html: t('metaverse-desc') }}></div>
-                </motion.div>
+                    </h1>
+                    <div dangerouslySetInnerHTML={{ __html: t('metaverse-desc') }}></div>
+                  </motion.div>
+                </Parallax>
               </div>
             </div>
           </section>
 
+          {/* WHAT IS LANDIAN? */}
           <section className={styles.fixedSize}>
             <div className={styles.centeredContent}
             >
@@ -118,16 +120,16 @@ export default function Home() {
                 initial="zoomOut"
                 whileInView="visible"
                 className={styles.imageWithText}>
-
-                <div className={styles.text}>
-                  <h1 dangerouslySetInnerHTML={{ __html: t('landian-title') }}>
-                  </h1>
-                  <div dangerouslySetInnerHTML={{ __html: t('landiant-desc') }}></div>
-
-                </div>
+                <Parallax speed={-20} rootMargin= {{ top: 800, right: 0, bottom: 0, left: 0 }} >
+                  <div className={styles.text}>
+                    <h1 dangerouslySetInnerHTML={{ __html: t('landian-title') }}>
+                    </h1>
+                    <div dangerouslySetInnerHTML={{ __html: t('landiant-desc') }}></div>
+                  </div>
+                </Parallax>
                 <div className={styles.image}>
                   <div className={styles.borderedContainer}>
-                    <div className={styles.bg}>
+                    <div  className={styles.bg}>
                       <Image src="/assets/images/landian.png" alt="landian" style={{ "objectFit": "cover" }} fill="true" />
                     </div>
                   </div>
@@ -136,6 +138,25 @@ export default function Home() {
             </div>
           </section>
 
+          {/* VIDEO CAROUSEL */}
+          <section className={styles.adaptativeSize}>
+            <VideoCarrousel />
+            <MobileCarousel />
+          </section>
+
+
+          {/* ABOUT LANDIAN */}
+          <section className={styles.adaptativeSize}>
+            <AboutLandian />
+          </section>
+
+
+          {/* ARTICLES CAROUSEL */}
+          <section className={`${styles.adaptativeSize}`}>
+            <News/>
+          </section>
+
+          {/* TUTORIAL */}
           <section className={`${styles.adaptativeSize} ${styles.third}`}>
             <div className={styles.adaptativeContent}>
               <h1>Tutorial</h1>
@@ -173,7 +194,10 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          {/* MARKETPLACE */}
           <Marketplace />
+
         </main>
       </div>
     </LandingLayout>

@@ -38,14 +38,17 @@ export default function LangSelector({onChange = () => {}}) {
     ]
 
     const [isOpen, setIsOpen] = useState(false)
-    const [currentLang, setCurrentLang] = useState({
-        code: 'en',
-        name: 'English',
-        flag: <Flags.GB title="British" />
-    })
+    const [currentLang, setCurrentLang] = useState(LOCALES[0])
 
     useEffect(() => {
-        setCurrentLang(LOCALES.find(locale => locale.code === localStorage.getItem('language')))
+        const langPersisted = localStorage.getItem('language')
+        
+        if (langPersisted) {
+            const localeFound = LOCALES.find(locale => locale.code === langPersisted)
+            setCurrentLang(localeFound ?? LOCALES[0])
+        } else {
+            localStorage.setItem('language', 'en')
+        }
         
         return () => {}
     }, [])
@@ -59,7 +62,7 @@ export default function LangSelector({onChange = () => {}}) {
         <div className={styles.container}>
             <button onClick={() => setIsOpen(!isOpen)}>
                 <div>
-                    { currentLang.flag } <span>{ currentLang.code }</span>
+                { currentLang.flag } <span>{ currentLang.code }</span>
                 </div>
             </button>
             <div className={styles.langOptions}>

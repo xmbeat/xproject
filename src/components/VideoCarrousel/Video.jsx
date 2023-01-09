@@ -1,30 +1,28 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import styles from "./VideoCarrousel.module.sass";
-import zoom from "effects/effects";
 
 const Video = ({ url }) => {
+  const {t} = useTranslation();
   return (
-    <motion.div
-      variants={zoom}
-      initial="zoomOut"
-      whileInView="visible"
-      className={styles.videoContainer}
-    >
-      <div className={styles.container}>
+    <div className={styles.videoContainer}>
+      <div
+        className={styles.container}
+        onClick={() => setVideo((video) => !video)}
+      >
         <picture>
-          <img src={url.image} />
+          <img src={url.image} alt={url.image}/>
         </picture>
       </div>
       <div className={styles.text}>
         <h3>{url.title}</h3>
         <div className={styles.watch}>
           <Link target="_blank" href={url.url}>
-            Mirar en YouTube
+            {t("watch")}
           </Link>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

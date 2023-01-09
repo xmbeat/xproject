@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import { PerspectiveCamera } from '@react-three/drei'
 import Scene from 'components/threejs/scene'
+import Image from 'next/image'
 export default function Connect() {
     const { t } = useTranslation()
     return <>
@@ -43,8 +44,9 @@ export default function Connect() {
             </div>
             <div className={styles.logoContainer}>
                 <Link href='/'>
-
-                    <h1><span>x</span> project</h1>
+                    <div className={styles.logo}>
+                        <Image src='/assets/images/logo.png' fill />
+                    </div>
                 </Link>
             </div>
         </main>

@@ -106,6 +106,7 @@
     overflow: hidden
     color: #01C38E
     cursor: pointer
+    font-size: 0.6rem
     font-weight: 600
     transition: all 0.3s ease-in-out
     text-align: center
@@ -114,13 +115,29 @@
         background: #018cc388
         color: #fff
 
+    @media (min-width: 450px)
+        font-size: 1rem
+
 .logo
     width: 10rem
     height: 2rem
     position: relative
     @media(max-width: 600px)
-        width: 7rem
-        height: 1.5rem
+        display: none
+
+    img
+        object-fit: contain
+        
+.mobilelogo
+    width: 2rem
+    height: 2rem
+    position: relative
+    display: none
+    @media(max-width: 600px)
+        display: block
+
+    img
+        object-fit: contain
 
 .langList
     ul
