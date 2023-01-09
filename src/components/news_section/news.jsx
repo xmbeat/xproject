@@ -109,7 +109,7 @@ export default function News() {
                 slidesPerView={itemsPerPage}
                 spaceBetween={30}
                 centeredSlides={true}
-                autoHeight={true}
+                autoHeight={false}
                 initialSlide={2}
                 onSlideChange={handleSlideChange}
                 navigation={true}
