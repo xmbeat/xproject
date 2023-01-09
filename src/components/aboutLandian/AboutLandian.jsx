@@ -3,6 +3,8 @@ import Lottie from "react-lottie";
 import * as animationData from "../../../public/lotties/eyes.json";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { Parallax } from 'react-scroll-parallax';
 import { motion } from "framer-motion";
 import { zoom, side } from "effects/effects";
 import { useTranslation } from "react-i18next";
