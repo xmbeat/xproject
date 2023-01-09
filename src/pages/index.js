@@ -55,7 +55,7 @@ export default function Home() {
 
         <main className={styles.home}>
           {/* HERO */}
-          <section className={`${styles.fixedSize} ${styles.first}`}>
+          <section style={{ height: '100vh' }} className={`${styles.fixedSize} ${styles.first}`}>
             <div className={styles.centeredContent}>
               <motion.div
                 variants={side}
