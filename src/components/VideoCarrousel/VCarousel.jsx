@@ -17,6 +17,7 @@ const Vcarousel = () => {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={3}
+        spaceBetween={60}
         initialSlide={2}
         coverflowEffect={{
           rotate: 50,
