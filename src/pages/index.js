@@ -70,10 +70,10 @@ export default function Home() {
                   {t('welcome')}
                 </motion.p>
               </div>
-              <div className={styles.play} onClick={() => setShowPlayer(true)}>
+              {/* <div className={styles.play} onClick={() => setShowPlayer(true)}>
 
                 <BsFillPlayFill />
-              </div>
+              </div> */}
             </div>
           </section>
 
