@@ -40,34 +40,36 @@ const AboutLandian = () => {
             className={styles.image}
           />
         </picture>
-        <div
-          className={styles.text}
-          style={{ marginTop: more ? "30rem" : "0" }}
-        >
-          <h2>{t("about")}</h2>
-          <p>{t("about1")}</p>
-          <p>{t("about2")}</p>
-          {more && (
-            <motion.div variants={side} initial="hidden" whileInView="visible">
-              <p>{t("about3")}</p>
-              <p>{t("about4")}</p>
-              <p>{t("about5")}</p>
-            </motion.div>
-          )}
-          {!more ? (
-            <button onClick={viewMore}>... {t("readmore")}</button>
-          ) : (
-            <button onClick={viewLess}>{t("readless")} ...</button>
-          )}
-          <div className={styles.whitepaper}>
-            <p>{t("learn")}</p>
-            <button className={styles.whitepaperbtn}>
-              <Link target="_blank" href="https://www.landian.io">
-                Landian
-              </Link>
-            </button>
+          <div
+            className={styles.text}
+            style={{ marginTop: more ? "30rem" : "0" }}
+          >
+          <Parallax speed={-20}>  
+              <h2>{t("about")}</h2>
+              <p>{t("about1")}</p>
+              <p>{t("about2")}</p>
+              {more && (
+                <motion.div variants={side} initial="hidden" whileInView="visible">
+                  <p>{t("about3")}</p>
+                  <p>{t("about4")}</p>
+                  <p>{t("about5")}</p>
+                </motion.div>
+              )}
+              {!more ? (
+                <button onClick={viewMore}>... {t("readmore")}</button>
+              ) : (
+                <button onClick={viewLess}>{t("readless")} ...</button>
+              )}
+              <div className={styles.whitepaper}>
+                <p>{t("learn")}</p>
+                <button className={styles.whitepaperbtn}>
+                  <Link target="_blank" href="https://www.landian.io">
+                    Landian
+                  </Link>
+                </button>
+              </div>
+            </Parallax> 
           </div>
-        </div>
         <div className={styles.lottie}>
           <Lottie options={defaultOptions} height={650} width={650} />
         </div>

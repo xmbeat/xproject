@@ -95,7 +95,7 @@ export default function Home() {
                     </div>
                   </div>
                 </motion.div>
-                <Parallax speed={-10} rootMargin= {{ top: 1000, right: 0, bottom: 0, left: 0 }} >
+                <Parallax speed={-20} rootMargin= {{ top: 1000, right: 0, bottom: 0, left: 0 }} >
                   <motion.div className={styles.text}
                     variants={zoom}
                     initial="zoomOut"
