@@ -21,6 +21,7 @@ import AboutLandian from 'components/aboutLandian/AboutLandian'
 import Marketplace from 'components/Marketplace'
 import { Parallax } from 'react-scroll-parallax';
 import MobileCarousel from 'components/VideoCarrousel/MobileCarousel'
+import Vcarousel from 'components/VideoCarrousel/VCarousel'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -140,7 +141,7 @@ export default function Home() {
 
           {/* VIDEO CAROUSEL */}
           <section className={styles.adaptativeSize}>
-            <VideoCarrousel />
+            <Vcarousel/>
             <MobileCarousel />
           </section>
 

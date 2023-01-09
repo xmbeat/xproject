@@ -44,7 +44,7 @@ const resources = {
             "about4": "The Metaverse is a virtual environment that gives users the opportunity to create experiences and engage with others from around the world. The Metaverse is inevitable, and yet the concept is far from new. Over decades we have come to depend on similar adaptations centered on commerce, social interactions, and unique interpretations of personal expression.",
             "about5": "Welcome to the world of Landian and the Metaverse’s next evolution of cooperation, communication, storytelling, and emotional responses without the impediments often created by distance, time, money, race, and religion.",
             "learn": "Learn more in",
-            "watch": "Watch on Youtube"
+            "watch": "Watch on"
         }
     },
     es: {
@@ -86,7 +86,7 @@ const resources = {
             "about4": "El Metaverso es un entorno virtual que ofrece a los usuarios la oportunidad de crear experiencias y relacionarse con otras personas de todo el mundo. El metaverso es inevitable, pero el concepto no es nuevo. Durante décadas hemos llegado a depender de adaptaciones similares centradas en el comercio, las interacciones sociales y las interpretaciones únicas de la expresión personal.  ",
             "about5": "Bienvenido al mundo de Landian y a la próxima evolución del Metaverso de la cooperación, la comunicación, la narración de historias y las respuestas emocionales sin los impedimentos que suelen crear la distancia, el tiempo, el dinero, la raza y la religión.",
             "learn": "Más información en",
-            "watch": "Ver en Youtube"
+            "watch": "Ver en "
         }
     },
     pt: {
@@ -128,7 +128,7 @@ const resources = {
             "about4": "O Metaverso é um ambiente virtual que oferece aos usuários a oportunidade de criar experiências e interagir com outras pessoas de todo o mundo. O Metaverso é inevitável, mas o conceito está longe de ser novo. Ao longo de décadas, passamos a depender de adaptações semelhantes centradas em comércio, interações sociais e interpretações únicas de expressão pessoal.",
             "about5": "Bem-vindo ao mundo de Landian e à próxima evolução do Metaverso de cooperação, comunicação, narrativa e respostas emocionais sem os impedimentos geralmente criados pela distância, tempo, dinheiro, raça e religião.",
             "learn": "Saiba mais em",
-            "watch": "Assista no Youtube"
+            "watch": "Assista no "
         }
     },
     kr: {
@@ -215,7 +215,7 @@ const resources = {
             "about4": "Metaverse là một môi trường ảo mang đến cho người dùng cơ hội tạo trải nghiệm và tương tác với những người khác từ khắp nơi trên thế giới. Metaverse là không thể tránh khỏi, tuy nhiên, khái niệm này không còn mới nữa. Trong nhiều thập kỷ, chúng ta đã phụ thuộc vào các điều chỉnh tương tự tập trung vào thương mại, tương tác xã hội và cách diễn giải độc đáo về biểu hiện cá nhân.",
             "about5": "Chào mừng đến với thế giới của Landian và sự phát triển tiếp theo của Metaverse về hợp tác, giao tiếp, kể chuyện và phản ứng cảm xúc mà không có những trở ngại thường được tạo ra bởi khoảng cách, thời gian, tiền bạc, chủng tộc và tôn giáo.",
             "learn": "Tìm hiểu thêm trong",
-            "watch": "Xem trên Youtube"
+            "watch": "Xem trên "
         }
     }
 };
