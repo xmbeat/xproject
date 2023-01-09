@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import styles from "./VideoCarrousel.module.sass";
 
 const Video = ({ url }) => {
+  const {t} = useTranslation();
   return (
     <div className={styles.videoContainer}>
       <div
@@ -16,7 +18,7 @@ const Video = ({ url }) => {
         <h3>{url.title}</h3>
         <div className={styles.watch}>
           <Link target="_blank" href={url.url}>
-            Mirar en YouTube
+            {t("watch")}
           </Link>
         </div>
       </div>

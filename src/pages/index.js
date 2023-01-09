@@ -19,10 +19,13 @@ import News from 'components/news_section/news'
 import VideoCarrousel from 'components/VideoCarrousel/VideoCarrousel'
 import AboutLandian from 'components/aboutLandian/AboutLandian'
 import Marketplace from 'components/Marketplace'
+import { Parallax } from 'react-scroll-parallax';
 import MobileCarousel from 'components/VideoCarrousel/MobileCarousel'
+
 export default function Home() {
   const { t } = useTranslation()
   const [showPlayer, setShowPlayer] = useState(false)
+
   return (
     <LandingLayout>
       <div>
@@ -86,22 +89,24 @@ export default function Home() {
                   initial="zoomOut"
                   whileInView="visible"
                 >
-                  <div className={styles.borderedContainer}>
+                  <div  className={styles.borderedContainer}>
                     <div className={styles.bg}>
                       <Image src="/assets/images/what_is.png" alt="what is: image" style={{ "objectFit": "cover" }} fill="true" />
                     </div>
                   </div>
                 </motion.div>
-                <motion.div className={styles.text}
-                  variants={zoom}
-                  initial="zoomOut"
-                  whileInView="visible"
-                >
-                  <h1 dangerouslySetInnerHTML={{ __html: t('metaverse-title') }}>
+                <Parallax speed={-20} rootMargin= {{ top: 1000, right: 0, bottom: 0, left: 0 }} >
+                  <motion.div className={styles.text}
+                    variants={zoom}
+                    initial="zoomOut"
+                    whileInView="visible"
+                  >
+                    <h1 dangerouslySetInnerHTML={{ __html: t('metaverse-title') }}>
 
-                  </h1>
-                  <div dangerouslySetInnerHTML={{ __html: t('metaverse-desc') }}></div>
-                </motion.div>
+                    </h1>
+                    <div dangerouslySetInnerHTML={{ __html: t('metaverse-desc') }}></div>
+                  </motion.div>
+                </Parallax>
               </div>
             </div>
           </section>
@@ -115,16 +120,16 @@ export default function Home() {
                 initial="zoomOut"
                 whileInView="visible"
                 className={styles.imageWithText}>
-
-                <div className={styles.text}>
-                  <h1 dangerouslySetInnerHTML={{ __html: t('landian-title') }}>
-                  </h1>
-                  <div dangerouslySetInnerHTML={{ __html: t('landiant-desc') }}></div>
-
-                </div>
+                <Parallax speed={-20} rootMargin= {{ top: 800, right: 0, bottom: 0, left: 0 }} >
+                  <div className={styles.text}>
+                    <h1 dangerouslySetInnerHTML={{ __html: t('landian-title') }}>
+                    </h1>
+                    <div dangerouslySetInnerHTML={{ __html: t('landiant-desc') }}></div>
+                  </div>
+                </Parallax>
                 <div className={styles.image}>
                   <div className={styles.borderedContainer}>
-                    <div className={styles.bg}>
+                    <div  className={styles.bg}>
                       <Image src="/assets/images/landian.png" alt="landian" style={{ "objectFit": "cover" }} fill="true" />
                     </div>
                   </div>

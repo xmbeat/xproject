@@ -5,7 +5,7 @@ import { initReactI18next } from "react-i18next";
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
-    en: { 
+    en: {
         translation: {
             "connect-wallet": "Claim Plots",
             "connect": "Claim",
@@ -34,7 +34,17 @@ const resources = {
             "start-now": "Start now",
             "marketplace": "Marketplace",
             "explore": "Explore the world",
-            "popular": "Popular Articles"
+            "popular": "Popular Articles",
+            "about": "About Landian",
+            "readmore": "Read more",
+            "readless": "Read Less",
+            "about1": "Landian exists so that people, businesses, organizations, and cultures can engage in the Metaverse unencumbered and without limitations. Moreover, it is where becoming anyone or anything is limited only by the imagination. One’s ability to evolve and thrive is determined by level of effort.",
+            "about2": "At Landian, our focus is to build on the collective growth of virtual worlds by making them more interactive, accessible, and easier to navigate.",
+            "about3": "Rewarding creativity and social interaction is what all great societies have in common. That is why Landian is packed with exciting incentives that stimulate user engagement and commerce. Plus, it is governed by a shared value system that benefits founders and users.",
+            "about4": "The Metaverse is a virtual environment that gives users the opportunity to create experiences and engage with others from around the world. The Metaverse is inevitable, and yet the concept is far from new. Over decades we have come to depend on similar adaptations centered on commerce, social interactions, and unique interpretations of personal expression.",
+            "about5": "Welcome to the world of Landian and the Metaverse’s next evolution of cooperation, communication, storytelling, and emotional responses without the impediments often created by distance, time, money, race, and religion.",
+            "learn": "Learn more in",
+            "watch": "Watch on Youtube"
         }
     },
     es: {
@@ -66,7 +76,17 @@ const resources = {
             "start-now": "Empezar ahora",
             "marketplace": "Marketplace",
             "explore": "Explora el mundo",
-            "popular": "Articulos Populares"
+            "popular": "Articulos Populares",
+            "about": "Acerca de Landian",
+            "readmore": "Leer más",
+            "readless": "Leer menos",
+            "about1": "Landian existe para que las personas, las empresas, las organizaciones y las culturas puedan participar en el Metaverso sin trabas ni limitaciones. Además, es donde convertirse en cualquier persona o cosa solamente está limitado por la imaginación. La capacidad de uno para evolucionar y prosperar viene determinada por el nivel de esfuerzo.",
+            "about2": "En Landian, nuestro objetivo es aprovechar el crecimiento colectivo de los mundos virtuales, haciéndolos más interactivos, accesibles y fáciles de navegar.",
+            "about3": "Recompensar la creatividad y la interacción social es lo que tienen en común todas las grandes sociedades. Por eso Landian está repleto de incentivos interesantes que estimulan el compromiso de los usuarios y las actividades comerciales. Además, se rige por un sistema de valores compartidos que beneficia a fundadores y usuarios.",
+            "about4": "El Metaverso es un entorno virtual que ofrece a los usuarios la oportunidad de crear experiencias y relacionarse con otras personas de todo el mundo. El metaverso es inevitable, pero el concepto no es nuevo. Durante décadas hemos llegado a depender de adaptaciones similares centradas en el comercio, las interacciones sociales y las interpretaciones únicas de la expresión personal.  ",
+            "about5": "Bienvenido al mundo de Landian y a la próxima evolución del Metaverso de la cooperación, la comunicación, la narración de historias y las respuestas emocionales sin los impedimentos que suelen crear la distancia, el tiempo, el dinero, la raza y la religión.",
+            "learn": "Más información en",
+            "watch": "Ver en Youtube"
         }
     },
     pt: {
@@ -98,7 +118,17 @@ const resources = {
             "start-now": "Comece agora",
             "marketplace": "Mercado",
             "explore": "Explorar o mundo",
-            "popular": "Artigos em alta"
+            "popular": "Artigos em alta",
+            "about": "Sobre Landian",
+            "readmore": "Consulte Mais informação",
+            "readless": "Leia menos",
+            "about1": "Landian existe para que pessoas, empresas, organizações e culturas possam se engajar no Metaverso sem restrições e sem limitações. Além disso, é onde se tornar alguém ou qualquer coisa é limitado apenas pela imaginação. A capacidade de evoluir e prosperar é determinada pelo nível de esforço.",
+            "about2": "Na Landian, nosso foco é desenvolver o crescimento coletivo dos mundos virtuais, tornando-os mais interativos, acessíveis e fáceis de navegar.",
+            "about3": "Recompensar a criatividade e a interação social é o que todas as grandes sociedades têm em comum. É por isso que a Landian está repleta de incentivos empolgantes que estimulam o engajamento e o comércio do usuário. Além disso, ela é regida por um sistema de valores compartilhados que beneficia fundadores e usuários.",
+            "about4": "O Metaverso é um ambiente virtual que oferece aos usuários a oportunidade de criar experiências e interagir com outras pessoas de todo o mundo. O Metaverso é inevitável, mas o conceito está longe de ser novo. Ao longo de décadas, passamos a depender de adaptações semelhantes centradas em comércio, interações sociais e interpretações únicas de expressão pessoal.",
+            "about5": "Bem-vindo ao mundo de Landian e à próxima evolução do Metaverso de cooperação, comunicação, narrativa e respostas emocionais sem os impedimentos geralmente criados pela distância, tempo, dinheiro, raça e religião.",
+            "learn": "Saiba mais em",
+            "watch": "Assista no Youtube"
         }
     },
     kr: {
@@ -130,7 +160,17 @@ const resources = {
             "start-now": "지금 시작",
             "marketplace": "시장",
             "explore": "세계를 탐험하다",
-            "popular": "유행하는 기사"
+            "popular": "유행하는 기사",
+            "about": "랜디안 소개",
+            "readmore": "더 읽기",
+            "readless": "적게 읽기",
+            "about1": "Landian은 사람, 기업, 조직 및 문화가 방해받지 않고 제한 없이 메타버스에 참여할 수 있도록 존재합니다. 또한 상상에 의해서만 누군가 또는 무엇이든 되는 것이 제한되는 곳입니다. 진화하고 번성하는 능력은 노력.",
+            "about2": "Landian에서 우리의 초점은 가상 세계를 더욱 상호 작용하고 액세스 가능하며 탐색하기 쉽게 만들어 가상 세계의 공동 성장을 기반으로 구축하는 것입니다.",
+            "about3": "창의성과 사회적 상호작용에 대한 보상은 모든 위대한 사회가 공통적으로 가지고 있는 것입니다. 그래서 Landian은 사용자 참여와 상거래를 자극하는 흥미로운 인센티브로 가득 차 있습니다. 또한 Landian은 창립자와 사용자에게 혜택을 주는 공유 가치 시스템에 의해 관리됩니다.",
+            "about4": "메타버스는 사용자에게 경험을 만들고 전 세계의 다른 사람들과 교류할 수 있는 기회를 제공하는 가상 환경입니다. 메타버스는 불가피하지만 그 개념은 새로운 것이 아닙니다. 수십 년 동안 우리는 다음을 중심으로 유사한 적응에 의존하게 되었습니다. 상거래, 사회적 상호 작용 및 개인 표현의 고유한 해석",
+            "about5": "거리, 시간, 돈, 인종 및 종교로 인해 종종 발생하는 장애 없이 협업, 커뮤니케이션, 스토리텔링 및 감정적 반응의 차세대 진화인 Landian 및 Metaverse의 세계에 오신 것을 환영합니다.",
+            "learn": "자세히 알아보기",
+            "watch": "유튜브에서 보기"
         }
     },
     vi: {
@@ -162,7 +202,20 @@ const resources = {
             "start-now": "Bắt đầu ngay",
             "marketplace": "chợ",
             "explore": "Khám phá thế giới",
-            "popular": "Bài viết phổ biến"
+            "popular": "Bài viết phổ biến",
+            "about": "About Landian",
+            "readmore": "Read more",
+            "readless": "Read Less",
+            "about": "Giới thiệu về Landian",
+            "readmore": "Đọc thêm",
+            "readless": "Đọc ít hơn",
+            "about1": "Landian tồn tại để mọi người, doanh nghiệp, tổ chức và nền văn hóa có thể tham gia vào Metaverse mà không bị cản trở và không có giới hạn. Hơn nữa, đó là nơi trở thành bất kỳ ai hoặc bất kỳ thứ gì chỉ bị giới hạn bởi trí tưởng tượng. Khả năng phát triển và phát triển của một người được xác định bởi cấp độ cố gắng.",
+            "about2": "Tại Landian, trọng tâm của chúng tôi là xây dựng dựa trên sự phát triển chung của thế giới ảo bằng cách làm cho chúng có tính tương tác hơn, dễ tiếp cận hơn và dễ điều hướng hơn.",
+            "about3": "Tưởng thưởng sự sáng tạo và tương tác xã hội là điểm chung của tất cả các xã hội vĩ đại. Đó là lý do tại sao Landian có rất nhiều ưu đãi hấp dẫn nhằm kích thích sự tham gia và thương mại của người dùng. Ngoài ra, nó được điều hành bởi một hệ thống giá trị chung mang lại lợi ích cho người sáng lập và người dùng.",
+            "about4": "Metaverse là một môi trường ảo mang đến cho người dùng cơ hội tạo trải nghiệm và tương tác với những người khác từ khắp nơi trên thế giới. Metaverse là không thể tránh khỏi, tuy nhiên, khái niệm này không còn mới nữa. Trong nhiều thập kỷ, chúng ta đã phụ thuộc vào các điều chỉnh tương tự tập trung vào thương mại, tương tác xã hội và cách diễn giải độc đáo về biểu hiện cá nhân.",
+            "about5": "Chào mừng đến với thế giới của Landian và sự phát triển tiếp theo của Metaverse về hợp tác, giao tiếp, kể chuyện và phản ứng cảm xúc mà không có những trở ngại thường được tạo ra bởi khoảng cách, thời gian, tiền bạc, chủng tộc và tôn giáo.",
+            "learn": "Tìm hiểu thêm trong",
+            "watch": "Xem trên Youtube"
         }
     }
 };
