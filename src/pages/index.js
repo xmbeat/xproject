@@ -152,7 +152,7 @@ export default function Home() {
 
 
           {/* ARTICLES CAROUSEL */}
-          <section className={`${styles.fixedSize}`}>
+          <section className={`${styles.adaptativeSize}`}>
             <News/>
           </section>
 
