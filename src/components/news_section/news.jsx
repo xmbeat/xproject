@@ -7,7 +7,9 @@ import { motion } from 'framer-motion'
 import { zoom, side } from 'effects/effects'
 // import Swiper JS
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {Pagination, Autoplay, Navigation} from 'swiper';
+import { Pagination, Autoplay, Navigation , EffectCards} from 'swiper';
+
+import "swiper/css/effect-cards";
 import 'swiper/css';
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -17,7 +19,7 @@ export default function News() {
     const carouselContainer = useRef()
     const cardStyle = useRef({})
     const { t } = useTranslation()
-
+    const [itemsPerPage, setItemsPerPage] = useState(3)
     const items = useMemo(() => {
         return [{
             title: 'Criptomonedas, la divisa del metaverso',
@@ -67,60 +69,45 @@ export default function News() {
         return date.toLocaleDateString('en-US', options)
     }, [])
 
-    // useEffect(() => {
-    //     var listener = () => {
-    //         if (carouselContainer.current) {
-    //             var rect = carouselContainer.current.getBoundingClientRect()
-    //             var maxCardWidth = 400
-    //             var padding = 30
-    //             var cardsPerPage = Math.ceil(rect.width / maxCardWidth)
-    //             var cardWidth = (rect.width - (padding * (cardsPerPage - 1))) / cardsPerPage
-    //             var pageCount = Math.ceil(items.length / cardsPerPage)
-    //             cardStyle.current  = {width: cardWidth}
-    //             var pages = []
-    //             for (var i = 0; i < pageCount; i++) {
-    //                 var children = []
-    //                 var start = i * cardsPerPage
-    //                 for (var j = start; j < start + cardsPerPage && j < items.length; j++) {
-    //                     children.push(items[j])
-    //                 }
-    //                 pages.push({
-    //                     items: children
-    //                 })
-    //             }
-    //             setPages(pages)
-    //         }
-    //     }
-    //     window.addEventListener('resize', listener)
-    //     listener()
-    //     return () => {
-    //         window.removeEventListener('resize', listener)
-    //     }
-    // }, [])
-
-    const handleSlideChange = useCallback((swiper)=>{
-        console.log(swiper.activeIndex)
+    useEffect(() => {
+        var listener = () => {
+            if (carouselContainer.current) {
+                var rect = carouselContainer.current.getBoundingClientRect()
+                var itemsPerPage = rect.width / 400
+                if (itemsPerPage >= 2){
+                    itemsPerPage = Math.ceil(itemsPerPage)
+                }
+                setItemsPerPage(itemsPerPage)
+            }
+        }
+        window.addEventListener('resize', listener)
+        listener()
+        return () => {
+            window.removeEventListener('resize', listener)
+        }
     }, [])
+
+    const handleSlideChange = useCallback((swiper) => {
+        
+    }, [])
+    console.log(itemsPerPage)
     return <div className={styles.container}>
         <h1>{t('explore')} <span>{t('popular')}</span></h1>
         <div ref={carouselContainer} className={styles.newsMobile}>
-            <Swiper 
+            <Swiper
                 className={styles.swiper}
-                slidesPerView={3} 
-                spaceBetween={30} 
+                slidesPerView={itemsPerPage}
+                spaceBetween={30}
                 centeredSlides={true}
-                navigation={true}
                 autoHeight={false}
                 initialSlide={2}
                 onSlideChange={handleSlideChange}
-                autoplay={{
-                    delay: 25000,
-                    disableOnInteraction: false,
-                  }}
+                navigation={true}
+                
                 pagination={{
                     clickable: true,
                 }}
-                modules={[Pagination, Autoplay, Navigation]} >
+                modules={[Pagination, Autoplay, Navigation, EffectCards]} >
                 {
                     items.map((item, index) =>
                         <SwiperSlide key={index} className={styles.slide} >
