@@ -73,9 +73,13 @@ export default function News() {
         var listener = () => {
             if (carouselContainer.current) {
                 var rect = carouselContainer.current.getBoundingClientRect()
-                var itemsPerPage = rect.width / 400
-                if (itemsPerPage >= 2){
-                    itemsPerPage = Math.ceil(itemsPerPage)
+                // var itemsPerPage = rect.width / 400
+                // if (itemsPerPage >= 2){
+                //     itemsPerPage = Math.floor(itemsPerPage)
+                // }
+                var itemsPerPage = Math.floor(rect.width / 400)
+                if (rect.width < 500){
+                    itemsPerPage = 1.4
                 }
                 setItemsPerPage(itemsPerPage)
             }
