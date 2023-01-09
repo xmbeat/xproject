@@ -26,14 +26,14 @@
 
 .newsCard
     width: 100%
-    min-height: 580px
+    height: fit-content
     border-radius: 20px
     background-color: #07252ad0
     backdrop-filter: blur(5px)
     box-shadow: 0px 0px 20px 0 #0000008e
     border: 1px solid #0c5a5f
     overflow: hidden
-    z-index: 1
+    isolation: isolate
     .newsBody
         padding: 180px 20px 20px 20px
         display: flex
@@ -114,6 +114,5 @@
 .swiper
     
 .slide
-    display: flex
-    height: 800px
+
   

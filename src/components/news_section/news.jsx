@@ -74,12 +74,18 @@ export default function News() {
             if (carouselContainer.current) {
                 var rect = carouselContainer.current.getBoundingClientRect()
                 var itemsPerPage = rect.width / 400
-                
+                var height = 600
                 if (rect.width < 600){
                     itemsPerPage = 1.4
+                    
                 }
                 else{
                     itemsPerPage = Math.floor(itemsPerPage)
+                    var w = rect.width / itemsPerPage
+                    height = w * 1.4
+                }
+                cardStyle.current = {
+                    height: `${height}px`
                 }
                 setItemsPerPage(itemsPerPage)
             }
@@ -103,7 +109,7 @@ export default function News() {
                 slidesPerView={itemsPerPage}
                 spaceBetween={30}
                 centeredSlides={true}
-                autoHeight={false}
+                autoHeight={true}
                 initialSlide={2}
                 onSlideChange={handleSlideChange}
                 navigation={true}
