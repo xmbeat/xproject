@@ -73,7 +73,7 @@ export default function News() {
         var listener = () => {
             if (carouselContainer.current) {
                 var rect = carouselContainer.current.getBoundingClientRect()
-                var itemsPerPage = rect.width / 300
+                var itemsPerPage = rect.width / 400
                 if (itemsPerPage >= 2){
                     itemsPerPage = Math.ceil(itemsPerPage)
                 }
@@ -103,10 +103,7 @@ export default function News() {
                 initialSlide={2}
                 onSlideChange={handleSlideChange}
                 navigation={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
+                
                 pagination={{
                     clickable: true,
                 }}
