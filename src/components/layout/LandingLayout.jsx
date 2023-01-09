@@ -46,21 +46,15 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
                 <div className={styles.logo}>
                     <Image src='/assets/images/logo.png' fill />
                 </div>
+                <div className={styles.mobilelogo}>
+                    <Image src='/android-chrome-512x512.png' fill />
+                </div>
             </div>
             <div className={styles.navbarItems}>
                 <LangSelector onChange={handleLanguageChange} />
-                {!onlyTranslate &&
-                    <Link href="/connect" className={styles.desktopOnly}> 
-                        <span className={styles.button}>{t('connect-wallet')}</span>
-                    </Link>
-                   
-                }
-                  {!onlyTranslate &&
-                    <Link className={styles.mobileOnly} href="/connect">
-                        <span className={styles.button}>{t('connect')}</span>
-                    </Link>
-                   
-                }
+                <Link href="/connect"> 
+                    <span className={styles.button}>{t('connect-wallet')}</span>
+                </Link>
             </div>
         </div>
         <div className={styles.content}>
