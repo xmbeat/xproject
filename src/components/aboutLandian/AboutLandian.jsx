@@ -45,7 +45,7 @@ const AboutLandian = () => {
             style={{ marginTop: more ? "30rem" : "0" }}
           >
           <Parallax speed={-20}>  
-              <h2>{t("about")}</h2>
+              <h1 dangerouslySetInnerHTML={{ __html: t("about") }}></h1>
               <p>{t("about1")}</p>
               <p>{t("about2")}</p>
               {more && (

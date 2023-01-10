@@ -96,7 +96,7 @@ export default function Home() {
                     </div>
                   </div>
                 </motion.div>
-                <Parallax speed={-20} rootMargin= {{ top: 1000, right: 0, bottom: 0, left: 0 }} >
+                <Parallax speed={-10} >
                   <motion.div className={styles.text}
                     variants={zoom}
                     initial="zoomOut"
@@ -121,7 +121,7 @@ export default function Home() {
                 initial="zoomOut"
                 whileInView="visible"
                 className={styles.imageWithText}>
-                <Parallax speed={-20} rootMargin= {{ top: 800, right: 0, bottom: 0, left: 0 }} >
+                <Parallax speed={-10} >
                   <div className={styles.text}>
                     <h1 dangerouslySetInnerHTML={{ __html: t('landian-title') }}>
                     </h1>

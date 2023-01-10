@@ -113,10 +113,8 @@ export default function News() {
                 initialSlide={2}
                 onSlideChange={handleSlideChange}
                 navigation={true}
-                
-                pagination={{
-                    clickable: true,
-                }}
+                loop={true}
+                pagination={false}
                 modules={[Pagination, Autoplay, Navigation, EffectCards]} >
                 {
                     items.map((item, index) =>
