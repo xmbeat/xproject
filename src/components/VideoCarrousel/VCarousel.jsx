@@ -18,6 +18,7 @@ const Vcarousel = () => {
         centeredSlides={true}
         slidesPerView={3}
         initialSlide={2}
+        loop={true}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,

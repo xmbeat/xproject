@@ -1,7 +1,7 @@
 import styles from "./MobileCarousel.module.sass";
 import { videos } from "./videos";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,11 +15,11 @@ const MobileCarousel = () => {
     <section className={styles.MobileCarousel}>
       <div>
         <Swiper
-          className={styles.swiper}
           slidesPerView={1}
           spaceBetween={-60}
           initialSlide={1}
           onSlideChange={handleSlideChange}
+          loop={true}
           autoplay={{
             delay: 25000,
             disableOnInteraction: false,

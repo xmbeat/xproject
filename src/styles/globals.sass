@@ -105,3 +105,23 @@ input[type=submit]
 
 input[type=submit]:hover 
   background-color: #01C38E
+
+// Swiper Classes Hardcode 😅
+.swiper-button-prev
+  color: #1b8b57 !important
+  @media(min-width: 600px)
+    margin-left: -5%
+
+.swiper-button-next
+  color: #1b8b57 !important
+  @media(min-width: 600px)
+    margin-right: -5%
+.swiper-slide
+  transform: scale(0.9) !important  
+  transition: 0.2s ease-in-out
+.swiper-slide-active
+  transform: scale(1) !important
+  transition: 0.2s ease-in-out
+  >div
+    box-shadow: 0px 0px 10px 0 #01c38f
+    border: 1px solid #01C38E
