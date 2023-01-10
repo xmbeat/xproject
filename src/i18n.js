@@ -76,7 +76,7 @@ const resources = {
             "start-now": "Empezar ahora",
             "marketplace": "Marketplace",
             "explore": "Explora el mundo",
-            "popular": "Articulos Populares",
+            "popular": "Artículos Populares",
             "about": "Acerca de <span>Landian</span>",
             "readmore": "Leer más",
             "readless": "Leer menos",
