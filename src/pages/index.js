@@ -16,7 +16,6 @@ import LandingLayout from 'components/layout/LandingLayout'
 import { useTranslation } from 'react-i18next'
 import Modal from 'components/Modal/modal'
 import News from 'components/news_section/news'
-import VideoCarrousel from 'components/VideoCarrousel/VideoCarrousel'
 import AboutLandian from 'components/aboutLandian/AboutLandian'
 import Marketplace from 'components/Marketplace'
 import { Parallax } from 'react-scroll-parallax';
