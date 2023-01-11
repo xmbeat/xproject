@@ -30,8 +30,8 @@ export default function Home() {
     <LandingLayout>
       <div>
         <Head>
-          <title>X Project</title>
-          <meta name="description" content="The X Project" />
+          <title>Xifra | Agreement</title>
+          <meta name="description" content="This website is intended to offer an exchange opportunity, obtaining your digital assets that will be your property." />
           <link rel="icon" href="/assets/images/favicon.png" />
 
         </Head>

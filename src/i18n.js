@@ -51,7 +51,7 @@ const resources = {
         translation: {
             "connect-wallet": "Reclamar Parcelas",
             "connect": "Reclamar",
-            "welcome": "Para todos los usuarios que desean saldar el pendiente que tienen acumulado revisen la información descrita. Este sitio web tiene como finalidad ofrecer una oportunidad de intercambio, obteniendo tu activos digitales que serán de tu propiedad.",
+            "welcome": "Para todos los usuarios que desean saldar el pendiente que tienen acumulado revisen la información descrita. Este sitio web tiene como finalidad ofrecer una oportunidad de intercambio, obteniendo tus activos digitales que serán de tu propiedad.",
             "first-step-title": "Ver el video",
             "first-step-desc": "Explicación de la información necesaria que necesitas entender",
             "second-step-title": "Conectar Wallet",
