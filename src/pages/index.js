@@ -112,7 +112,7 @@ export default function Home() {
           </section>
 
           {/* WHAT IS LANDIAN? */}
-          <section className={styles.fixedSize}>
+          <section className={`${styles.fixedSize} ${styles.second}`}>
             <div className={styles.centeredContent}
             >
               <motion.div
