@@ -73,6 +73,8 @@
 .fixedSize
   width: 100%
   height: calc(100vh - 160px)
+  @media (max-width: 600px)
+    min-height: 45rem
   overflow: hidden
   position: relative
 
@@ -90,7 +92,9 @@
     font-size: 60px
   .text
     max-width: 640px
-
+.second
+  @media (max-width: 600px)
+    width: unset
 .third
   h1
     margin-bottom: 60px
@@ -102,6 +106,8 @@
   gap: 100px
   align-items: center
   position: relative
+  @media (max-width: 600px)
+    margin-top: 10rem
   .image
     position: relative
     flex-basis: auto

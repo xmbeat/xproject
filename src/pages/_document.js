@@ -4,8 +4,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        {/* <link rel="shortcut icon" href="/assets/images/favicon.png" /> */}
-        <meta property="og:title" content="Agreement" />
+        <meta property="og:title" content="Xifra | Agreement" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://agreement.xifraglobal.com/" />
         <meta property="og:image" content="https://agreement.xifraglobal.com/assets/images/city-login-dark.png" />

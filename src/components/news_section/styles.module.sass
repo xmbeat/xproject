@@ -5,6 +5,8 @@
     display: flex
     justify-content: center
     flex-flow: column
+    @media (max-width: 600px)
+        margin-top: 10rem
     >h1
         text-align: center
         padding: 20px
@@ -25,13 +27,14 @@
     gap: 30px
 
 .newsCard
+    position: relative
     width: 100%
     height: fit-content
-    border-radius: 20px
+    border-radius: 25px
     background-color: #07252ad0
     backdrop-filter: blur(5px)
-    box-shadow: 0px 0px 20px 0 #0000008e
-    border: 1px solid #0c5a5f
+    // box-shadow: 0px 0px 20px 0 #0000008e
+    // border: 1px solid #0c5a5f
     overflow: hidden
     isolation: isolate
     .newsBody
@@ -112,7 +115,6 @@
         color: #fff
 
 .swiper
-    
+    position: unset !important
 .slide
-
   

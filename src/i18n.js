@@ -35,7 +35,7 @@ const resources = {
             "marketplace": "Marketplace",
             "explore": "Explore the world",
             "popular": "Popular Articles",
-            "about": "About Landian",
+            "about": "About <span>Landian</span>",
             "readmore": "Read more",
             "readless": "Read Less",
             "about1": "Landian exists so that people, businesses, organizations, and cultures can engage in the Metaverse unencumbered and without limitations. Moreover, it is where becoming anyone or anything is limited only by the imagination. One’s ability to evolve and thrive is determined by level of effort.",
@@ -44,14 +44,14 @@ const resources = {
             "about4": "The Metaverse is a virtual environment that gives users the opportunity to create experiences and engage with others from around the world. The Metaverse is inevitable, and yet the concept is far from new. Over decades we have come to depend on similar adaptations centered on commerce, social interactions, and unique interpretations of personal expression.",
             "about5": "Welcome to the world of Landian and the Metaverse’s next evolution of cooperation, communication, storytelling, and emotional responses without the impediments often created by distance, time, money, race, and religion.",
             "learn": "Learn more in",
-            "watch": "Watch on Youtube"
+            "watch": "Watch on"
         }
     },
     es: {
         translation: {
             "connect-wallet": "Reclamar Parcelas",
             "connect": "Reclamar",
-            "welcome": "Para todos los usuarios que desean saldar el pendiente que tienen acumulado revisen la información descrita. Este sitio web tiene como finalidad ofrecer una oportunidad de intercambio, obteniendo tu activos digitales que serán de tu propiedad.",
+            "welcome": "Para todos los usuarios que desean saldar el pendiente que tienen acumulado revisen la información descrita. Este sitio web tiene como finalidad ofrecer una oportunidad de intercambio, obteniendo tus activos digitales que serán de tu propiedad.",
             "first-step-title": "Ver el video",
             "first-step-desc": "Explicación de la información necesaria que necesitas entender",
             "second-step-title": "Conectar Wallet",
@@ -76,8 +76,8 @@ const resources = {
             "start-now": "Empezar ahora",
             "marketplace": "Marketplace",
             "explore": "Explora el mundo",
-            "popular": "Articulos Populares",
-            "about": "Acerca de Landian",
+            "popular": "Artículos Populares",
+            "about": "Acerca de <span>Landian</span>",
             "readmore": "Leer más",
             "readless": "Leer menos",
             "about1": "Landian existe para que las personas, las empresas, las organizaciones y las culturas puedan participar en el Metaverso sin trabas ni limitaciones. Además, es donde convertirse en cualquier persona o cosa solamente está limitado por la imaginación. La capacidad de uno para evolucionar y prosperar viene determinada por el nivel de esfuerzo.",
@@ -86,7 +86,7 @@ const resources = {
             "about4": "El Metaverso es un entorno virtual que ofrece a los usuarios la oportunidad de crear experiencias y relacionarse con otras personas de todo el mundo. El metaverso es inevitable, pero el concepto no es nuevo. Durante décadas hemos llegado a depender de adaptaciones similares centradas en el comercio, las interacciones sociales y las interpretaciones únicas de la expresión personal.  ",
             "about5": "Bienvenido al mundo de Landian y a la próxima evolución del Metaverso de la cooperación, la comunicación, la narración de historias y las respuestas emocionales sin los impedimentos que suelen crear la distancia, el tiempo, el dinero, la raza y la religión.",
             "learn": "Más información en",
-            "watch": "Ver en Youtube"
+            "watch": "Ver en "
         }
     },
     pt: {
@@ -119,7 +119,7 @@ const resources = {
             "marketplace": "Mercado",
             "explore": "Explorar o mundo",
             "popular": "Artigos em alta",
-            "about": "Sobre Landian",
+            "about": "Sobre <span>Landian</span>",
             "readmore": "Consulte Mais informação",
             "readless": "Leia menos",
             "about1": "Landian existe para que pessoas, empresas, organizações e culturas possam se engajar no Metaverso sem restrições e sem limitações. Além disso, é onde se tornar alguém ou qualquer coisa é limitado apenas pela imaginação. A capacidade de evoluir e prosperar é determinada pelo nível de esforço.",
@@ -128,7 +128,7 @@ const resources = {
             "about4": "O Metaverso é um ambiente virtual que oferece aos usuários a oportunidade de criar experiências e interagir com outras pessoas de todo o mundo. O Metaverso é inevitável, mas o conceito está longe de ser novo. Ao longo de décadas, passamos a depender de adaptações semelhantes centradas em comércio, interações sociais e interpretações únicas de expressão pessoal.",
             "about5": "Bem-vindo ao mundo de Landian e à próxima evolução do Metaverso de cooperação, comunicação, narrativa e respostas emocionais sem os impedimentos geralmente criados pela distância, tempo, dinheiro, raça e religião.",
             "learn": "Saiba mais em",
-            "watch": "Assista no Youtube"
+            "watch": "Assista no "
         }
     },
     kr: {
@@ -161,7 +161,7 @@ const resources = {
             "marketplace": "시장",
             "explore": "세계를 탐험하다",
             "popular": "유행하는 기사",
-            "about": "랜디안 소개",
+            "about": "랜디안 <span>소개</span>",
             "readmore": "더 읽기",
             "readless": "적게 읽기",
             "about1": "Landian은 사람, 기업, 조직 및 문화가 방해받지 않고 제한 없이 메타버스에 참여할 수 있도록 존재합니다. 또한 상상에 의해서만 누군가 또는 무엇이든 되는 것이 제한되는 곳입니다. 진화하고 번성하는 능력은 노력.",
@@ -203,7 +203,7 @@ const resources = {
             "marketplace": "chợ",
             "explore": "Khám phá thế giới",
             "popular": "Bài viết phổ biến",
-            "about": "About Landian",
+            "about": "About <span>Landian</span>",
             "readmore": "Read more",
             "readless": "Read Less",
             "about": "Giới thiệu về Landian",
@@ -215,7 +215,7 @@ const resources = {
             "about4": "Metaverse là một môi trường ảo mang đến cho người dùng cơ hội tạo trải nghiệm và tương tác với những người khác từ khắp nơi trên thế giới. Metaverse là không thể tránh khỏi, tuy nhiên, khái niệm này không còn mới nữa. Trong nhiều thập kỷ, chúng ta đã phụ thuộc vào các điều chỉnh tương tự tập trung vào thương mại, tương tác xã hội và cách diễn giải độc đáo về biểu hiện cá nhân.",
             "about5": "Chào mừng đến với thế giới của Landian và sự phát triển tiếp theo của Metaverse về hợp tác, giao tiếp, kể chuyện và phản ứng cảm xúc mà không có những trở ngại thường được tạo ra bởi khoảng cách, thời gian, tiền bạc, chủng tộc và tôn giáo.",
             "learn": "Tìm hiểu thêm trong",
-            "watch": "Xem trên Youtube"
+            "watch": "Xem trên "
         }
     }
 };

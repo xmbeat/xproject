@@ -16,11 +16,11 @@ import LandingLayout from 'components/layout/LandingLayout'
 import { useTranslation } from 'react-i18next'
 import Modal from 'components/Modal/modal'
 import News from 'components/news_section/news'
-import VideoCarrousel from 'components/VideoCarrousel/VideoCarrousel'
 import AboutLandian from 'components/aboutLandian/AboutLandian'
 import Marketplace from 'components/Marketplace'
 import { Parallax } from 'react-scroll-parallax';
 import MobileCarousel from 'components/VideoCarrousel/MobileCarousel'
+import Vcarousel from 'components/VideoCarrousel/VCarousel'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -30,8 +30,8 @@ export default function Home() {
     <LandingLayout>
       <div>
         <Head>
-          <title>X Project</title>
-          <meta name="description" content="The X Project" />
+          <title>Xifra | Agreement</title>
+          <meta name="description" content="This website is intended to offer an exchange opportunity, obtaining your digital assets that will be your property." />
           <link rel="icon" href="/assets/images/favicon.png" />
 
         </Head>
@@ -54,7 +54,7 @@ export default function Home() {
 
         <main className={styles.home}>
           {/* HERO */}
-          <section className={`${styles.fixedSize} ${styles.first}`}>
+          <section style={{ height: '100vh' }} className={`${styles.fixedSize} ${styles.first}`}>
             <div className={styles.centeredContent}>
               <motion.div
                 variants={side}
@@ -95,7 +95,7 @@ export default function Home() {
                     </div>
                   </div>
                 </motion.div>
-                <Parallax speed={-20} rootMargin= {{ top: 1000, right: 0, bottom: 0, left: 0 }} >
+                <Parallax speed={-10} >
                   <motion.div className={styles.text}
                     variants={zoom}
                     initial="zoomOut"
@@ -112,7 +112,7 @@ export default function Home() {
           </section>
 
           {/* WHAT IS LANDIAN? */}
-          <section className={styles.fixedSize}>
+          <section className={`${styles.fixedSize} ${styles.second}`}>
             <div className={styles.centeredContent}
             >
               <motion.div
@@ -120,7 +120,7 @@ export default function Home() {
                 initial="zoomOut"
                 whileInView="visible"
                 className={styles.imageWithText}>
-                <Parallax speed={-20} rootMargin= {{ top: 800, right: 0, bottom: 0, left: 0 }} >
+                <Parallax speed={-10} >
                   <div className={styles.text}>
                     <h1 dangerouslySetInnerHTML={{ __html: t('landian-title') }}>
                     </h1>
@@ -140,7 +140,7 @@ export default function Home() {
 
           {/* VIDEO CAROUSEL */}
           <section className={styles.adaptativeSize}>
-            <VideoCarrousel />
+            <Vcarousel/>
             <MobileCarousel />
           </section>
 
