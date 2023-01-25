@@ -73,10 +73,9 @@ export default function Home() {
                   {t('welcome')}
                 </motion.p>
               </div>
-              {/* <div className={styles.play} onClick={() => setShowPlayer(true)}>
-
+              <div className={styles.play} onClick={() => setShowPlayer(true)}>
                 <BsFillPlayFill />
-              </div> */}
+              </div>
             </div>
           </section>
 
@@ -129,7 +128,7 @@ export default function Home() {
                 </Parallax>
                 <div className={styles.image}>
                   <div className={styles.borderedContainer}>
-                    <div  className={styles.bg}>
+                    <div className={styles.bg}>
                       <Image src="/assets/images/landian.png" alt="landian" style={{ "objectFit": "cover" }} fill="true" />
                     </div>
                   </div>
