@@ -8,9 +8,10 @@ export default function Scene() {
     const cameraPositions = useMemo(() => {
         return [
             { position: new Vector3(0, 0, -8), lookAt: new Vector3(0, 0, 0), scrollPos: [0, 400] },
-            { position: new Vector3(3, 3, -7), lookAt: new Vector3(0, 0, 0), scrollPos: [400, 1200] },
-            { position: new Vector3(-3, -3, -8), lookAt: new Vector3(0, 0, 0), scrollPos: [1200, 2000] },
-            { position: new Vector3(-3, 3, -8), lookAt: new Vector3(0, 0, 0), scrollPos: [2000, 20000] }
+            { position: new Vector3(-2, 0, -2), lookAt: new Vector3(0, 0, 0), scrollPos: [400, 1200] },
+            { position: new Vector3(-3, -3, -4), lookAt: new Vector3(0, 0, 0), scrollPos: [1200, 2000] },
+            { position: new Vector3(-3, 1, -8), lookAt: new Vector3(0, 0, 0), scrollPos: [2000, 2600] },
+            { position: new Vector3(-3, 3, -8), lookAt: new Vector3(0, 0, 0), scrollPos: [2600, 20000] }
         ]
     })
     const [currentCamera,  setCurrentCamera] = useState(null)
