@@ -51,10 +51,11 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
                 </div>
             </div>
             <div className={styles.navbarItems}>
+                <span>{ t('header-text') }</span>
                 <LangSelector onChange={handleLanguageChange} />
-                <Link href="/connect"> 
+                {/* <Link href="/connect"> 
                     <span className={styles.button}>{t('connect-wallet')}</span>
-                </Link>
+                </Link> */}
             </div>
         </div>
         <div className={styles.content}>
