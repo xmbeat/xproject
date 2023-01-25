@@ -21,7 +21,7 @@ const MobileCarousel = () => {
           onSlideChange={handleSlideChange}
           loop={true}
           autoplay={{
-            delay: 25000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           modules={[Autoplay, Navigation]}
