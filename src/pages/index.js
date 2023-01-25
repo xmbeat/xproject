@@ -77,6 +77,7 @@ export default function Home() {
                 <BsFillPlayFill />
               </div>
             </div>
+            <span>{t('header-text')}</span>
           </section>
 
           {/* WHAT IS METAVERSE? */}
