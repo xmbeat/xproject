@@ -62,29 +62,15 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
             {children}
         </div>
         <div className={styles.footer}>
-            <div className={styles.disclaimer}>
-                {t('copyright')}
-            </div>
             <div className={styles.imageContainer}>
-                {/* {logo} */}
                 <div className={styles.logo}>
                     <Image src='/assets/images/logo.png' fill />
                 </div>
-                {/* <div className={styles.socials}>
-                    <Link href='#'>
-                        <FaFacebookF />
-                    </a>
-                    <a href='#'>
-                        <AiFillInstagram />
-                    </a>
-                </div> */}
             </div>
-            <div className={styles.linkContainer}>
-                <Link href="/terms-conditions">
-                    {t('disclaimer-title')}
-                </Link>
-            </div>
-
+            <span className={styles.copyright}>
+                {/* {t('copyright')} */}
+                Xifra Global 2022 © All rights reserved
+            </span>
         </div>
     </div>
 }
