@@ -1,20 +1,12 @@
 // Common
 import Image from 'next/image'
 import Link from 'next/link'
+// Components
+import InnerContainer from 'components/layout/InnerContainer';
 // Translation
 import { useTranslation } from 'react-i18next';
 // Styles
 import styles from './styles.module.sass'
-
-const InnerContainer = ({ children }) => (
-    <>
-        <div className={styles.innerContainer}>
-            <div className={styles.childrenContainer}>
-                { children }
-            </div>
-        </div>
-    </>
-)
 
 export default function Marketplace() {
 

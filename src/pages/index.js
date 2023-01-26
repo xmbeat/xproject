@@ -21,6 +21,7 @@ import Marketplace from 'components/Marketplace'
 import { Parallax } from 'react-scroll-parallax';
 import MobileCarousel from 'components/VideoCarrousel/MobileCarousel'
 import Vcarousel from 'components/VideoCarrousel/VCarousel'
+import InnerContainer from 'components/layout/InnerContainer'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -113,29 +114,29 @@ export default function Home() {
 
           {/* WHAT IS LANDIAN? */}
           <section className={`${styles.fixedSize} ${styles.second}`}>
-            <div className={styles.centeredContent}
-            >
-              <motion.div
-                variants={zoom}
-                initial="zoomOut"
-                whileInView="visible"
-                className={styles.imageWithText}>
-                <Parallax speed={-10} >
-                  <div className={styles.text}>
-                    <h1 dangerouslySetInnerHTML={{ __html: t('landian-title') }}>
-                    </h1>
-                    <div dangerouslySetInnerHTML={{ __html: t('landiant-desc') }}></div>
-                  </div>
-                </Parallax>
-                <div className={styles.image}>
-                  <div className={styles.borderedContainer}>
-                    <div className={styles.bg}>
-                      <Image src="/assets/images/landian.png" alt="landian" style={{ "objectFit": "cover" }} fill="true" />
+            <InnerContainer>
+              <div className={styles.content}>
+                <motion.div
+                  variants={zoom}
+                  initial="zoomOut"
+                  whileInView="visible"
+                  className={styles.imageWithText}>
+                  <Parallax speed={-10} >
+                    <div className={styles.text}>
+                      <h1 dangerouslySetInnerHTML={{ __html: t('landian-title') }} />
+                      <div dangerouslySetInnerHTML={{ __html: t('landiant-desc') }} />
+                    </div>
+                  </Parallax>
+                  <div className={styles.image}>
+                    <div className={styles.borderedContainer}>
+                      <div className={styles.bg}>
+                        <Image src="/assets/images/landian.png" alt="landian" style={{ "objectFit": "contain" }} fill="true" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            </div>
+                </motion.div>
+              </div>
+            </InnerContainer>
           </section>
 
           {/* VIDEO CAROUSEL */}
