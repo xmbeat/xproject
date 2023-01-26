@@ -5,7 +5,7 @@ import { videos } from "./videos";
 // Import Swiper styles
 import "swiper/css/effect-coverflow";
 // import required modules
-import { EffectCoverflow } from "swiper";
+import { EffectCoverflow, Autoplay } from "swiper";
 import Video from "./Video";
 import styles from "./VCarousel.module.sass";
 
@@ -16,7 +16,7 @@ const Vcarousel = () => {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={3}
+        slidesPerView={2}
         initialSlide={2}
         loop={true}
         coverflowEffect={{
@@ -26,7 +26,11 @@ const Vcarousel = () => {
           modifier: 1, 
           slideShadows: false
         }}
-        modules={[EffectCoverflow]}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false
+        }}
+        modules={[Autoplay, EffectCoverflow]}
         className={styles.Swipper}
       >
         {videos.map((item, index) => (

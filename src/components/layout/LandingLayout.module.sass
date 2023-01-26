@@ -24,10 +24,37 @@
             height: 100px
         .imageContainer
             position: relative
+        .logo
+            width: 10rem
+            height: 2rem
+            position: relative
+            @media(max-width: 600px)
+                display: none
+
+            img
+                object-fit: contain
+                
+        .mobilelogo
+            width: 2rem
+            height: 2rem
+            position: relative
+            display: none
+            @media(max-width: 600px)
+                display: block
+
+            img
+                object-fit: contain
         .navbarItems
             display: flex
             align-items: center
             gap: 1rem
+
+            span
+                display: none
+                font-size: 0.8rem
+                text-align: end
+                @media (min-width: 1024px)
+                    display: block
         div
             pointer-events: auto
     .content
@@ -39,55 +66,34 @@
         @media (min-width: 600px)
             min-height: calc( 100vh - 200px )
     .footer
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 1rem
         background: #018cc300
         -webkit-backdrop-filter: blur(10px)
         backdrop-filter: blur(10px)
-        font-size: bold
-        position: relative
-        display: flex
+        padding: 2rem 0
         overflow: hidden
-        justify-content: space-between
-        gap: 1rem
-        height: 100px
-        align-items: center
 
-        .disclaimer
-            // flex-grow: 1
-            padding: 0px 0px 0px 30px
-            font-weight: bold
-            width: 100%
-        .linkContainer
-            padding: 0px 30px 0px 
-            width: 100%
-            text-align: right
-            // display: flex
-            // justify-content: flex-end
+        .copyright
+            font-size: 0.8rem
+            color: #FFF
+            text-align: center
+            
         .imageContainer
-            // width: calc(50% + 70px)
-            width: auto
             width: 100%
-            position: relative
             display: flex
             flex-direction: column
             align-items: center
-            .socials
-                display: flex
-                flex-direction: row
-                padding-top: 2rem
-                column-gap: 2rem
-                font-size: 1.5rem
-            @media (max-width: 600px)
-                margin-right: 0
-            img
-                width: 140px
-        @media (max-width: 600px)
-            flex-flow: column
-            height: 200px
-            justify-content: center
-            .disclaimer
-                text-align: center
-            .linkContainer
-                text-align: center
+
+            .logo
+                width: 10rem
+                height: 2rem
+                position: relative
+                img
+                    object-fit: contain
 
 
 .mobileOnly
@@ -117,27 +123,6 @@
 
     @media (min-width: 450px)
         font-size: 1rem
-
-.logo
-    width: 10rem
-    height: 2rem
-    position: relative
-    @media(max-width: 600px)
-        display: none
-
-    img
-        object-fit: contain
-        
-.mobilelogo
-    width: 2rem
-    height: 2rem
-    position: relative
-    display: none
-    @media(max-width: 600px)
-        display: block
-
-    img
-        object-fit: contain
 
 .langList
     ul

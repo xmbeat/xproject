@@ -17,17 +17,17 @@ export const videos = [
     },
     {
       url: "https://youtu.be/d0rmkp-0St8",
-      image: "/assets/videos/video5.jpg",
+      image: "/assets/videos/video4.jpg",
       title: "TUTORIAL DEL MARKETPLACE DE LANDIAN",
     },
     {
       url: "https://youtu.be/fN_KwYI3B_E",
-      image: "/assets/videos/video6.jpg",
+      image: "/assets/videos/video5.jpg",
       title: "Landian, The Future of the Metaverse - Univision",
     },
     {
       url: "https://youtu.be/fIrt9_s3GuM",
-      image: "/assets/videos/video4.jpg",
+      image: "/assets/videos/video6.jpg",
       title: "What’s behind Landian Biomes Test 1?",
     },
   ];

@@ -44,7 +44,8 @@ const resources = {
             "about4": "The Metaverse is a virtual environment that gives users the opportunity to create experiences and engage with others from around the world. The Metaverse is inevitable, and yet the concept is far from new. Over decades we have come to depend on similar adaptations centered on commerce, social interactions, and unique interpretations of personal expression.",
             "about5": "Welcome to the world of Landian and the Metaverse’s next evolution of cooperation, communication, storytelling, and emotional responses without the impediments often created by distance, time, money, race, and religion.",
             "learn": "Learn more in",
-            "watch": "Watch on"
+            "watch": "Watch on",
+            "header-text": "To continue the process, check your email and look for the proposal message in your inbox."
         }
     },
     es: {
@@ -86,7 +87,8 @@ const resources = {
             "about4": "El Metaverso es un entorno virtual que ofrece a los usuarios la oportunidad de crear experiencias y relacionarse con otras personas de todo el mundo. El metaverso es inevitable, pero el concepto no es nuevo. Durante décadas hemos llegado a depender de adaptaciones similares centradas en el comercio, las interacciones sociales y las interpretaciones únicas de la expresión personal.  ",
             "about5": "Bienvenido al mundo de Landian y a la próxima evolución del Metaverso de la cooperación, la comunicación, la narración de historias y las respuestas emocionales sin los impedimentos que suelen crear la distancia, el tiempo, el dinero, la raza y la religión.",
             "learn": "Más información en",
-            "watch": "Ver en "
+            "watch": "Ver en ",
+            "header-text": "Para continuar el proceso revisa tu correo electrónico y busca el mensaje de propuesta en tu bandeja de entrada."
         }
     },
     pt: {
@@ -128,7 +130,8 @@ const resources = {
             "about4": "O Metaverso é um ambiente virtual que oferece aos usuários a oportunidade de criar experiências e interagir com outras pessoas de todo o mundo. O Metaverso é inevitável, mas o conceito está longe de ser novo. Ao longo de décadas, passamos a depender de adaptações semelhantes centradas em comércio, interações sociais e interpretações únicas de expressão pessoal.",
             "about5": "Bem-vindo ao mundo de Landian e à próxima evolução do Metaverso de cooperação, comunicação, narrativa e respostas emocionais sem os impedimentos geralmente criados pela distância, tempo, dinheiro, raça e religião.",
             "learn": "Saiba mais em",
-            "watch": "Assista no "
+            "watch": "Assista no ",
+            "header-text": "Para continuar o processo, verifique seu e-mail e procure a mensagem da proposta em sua caixa de entrada."
         }
     },
     kr: {
@@ -170,7 +173,8 @@ const resources = {
             "about4": "메타버스는 사용자에게 경험을 만들고 전 세계의 다른 사람들과 교류할 수 있는 기회를 제공하는 가상 환경입니다. 메타버스는 불가피하지만 그 개념은 새로운 것이 아닙니다. 수십 년 동안 우리는 다음을 중심으로 유사한 적응에 의존하게 되었습니다. 상거래, 사회적 상호 작용 및 개인 표현의 고유한 해석",
             "about5": "거리, 시간, 돈, 인종 및 종교로 인해 종종 발생하는 장애 없이 협업, 커뮤니케이션, 스토리텔링 및 감정적 반응의 차세대 진화인 Landian 및 Metaverse의 세계에 오신 것을 환영합니다.",
             "learn": "자세히 알아보기",
-            "watch": "유튜브에서 보기"
+            "watch": "유튜브에서 보기",
+            "header-text": "프로세스를 계속하려면 이메일을 확인하고 받은 편지함에서 제안 메시지를 찾으세요."
         }
     },
     vi: {
@@ -215,7 +219,8 @@ const resources = {
             "about4": "Metaverse là một môi trường ảo mang đến cho người dùng cơ hội tạo trải nghiệm và tương tác với những người khác từ khắp nơi trên thế giới. Metaverse là không thể tránh khỏi, tuy nhiên, khái niệm này không còn mới nữa. Trong nhiều thập kỷ, chúng ta đã phụ thuộc vào các điều chỉnh tương tự tập trung vào thương mại, tương tác xã hội và cách diễn giải độc đáo về biểu hiện cá nhân.",
             "about5": "Chào mừng đến với thế giới của Landian và sự phát triển tiếp theo của Metaverse về hợp tác, giao tiếp, kể chuyện và phản ứng cảm xúc mà không có những trở ngại thường được tạo ra bởi khoảng cách, thời gian, tiền bạc, chủng tộc và tôn giáo.",
             "learn": "Tìm hiểu thêm trong",
-            "watch": "Xem trên "
+            "watch": "Xem trên ",
+            "header-text": "Để tiếp tục quá trình, hãy kiểm tra email của bạn và tìm thông báo đề xuất trong hộp thư đến của bạn."
         }
     }
 };
