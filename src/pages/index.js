@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from 'styles/home.module.sass'
 import { BsFillPlayFill, BsFillPlayCircleFill } from 'react-icons/bs'
 import { IoIosWallet, IoWallet } from 'react-icons/io'
+import { BsFillCircleFill } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import { zoom, side } from 'effects/effects'
 import { Canvas } from '@react-three/fiber'
@@ -56,17 +57,23 @@ export default function Home() {
         <main className={styles.home}>
           {/* HERO */}
           <section style={{ height: '100vh' }} className={`${styles.fixedSize} ${styles.first}`}>
-            <div className={styles.centeredContent}>
+          <div className={styles.centeredContent}>
               <motion.div
-              
+                variants={side}
+                initial="hidden"
+                whileInView="visible"
+                className={styles.logo}
               >
                 <Image src='/assets/images/logo.png' fill />
               </motion.div>
               <div className={styles.text}>
-                <p
+                <motion.p
+                  variants={zoom}
+                  initial="zoomOut"
+                  whileInView="visible"
                 >
                   {t('welcome')}
-                </p>
+                </motion.p>
               </div>
               <div className={styles.play} onClick={() => setShowPlayer(true)}>
                 <BsFillPlayFill />
@@ -78,29 +85,34 @@ export default function Home() {
           {/* WHAT IS METAVERSE? */}
           <section className={`${styles.adaptativeSize } ${styles.metaverse}`} >
             <div className={styles.adaptativeContent}>
-              <div className={styles.imageWithText}>
-                <motion.div className={styles.image}
-                
-                >
-                  <div  className={styles.borderedContainer}>
-                    <div className={styles.bg}>
-                      <Image src="/assets/images/what_is.png" alt="what is: image" style={{ "objectFit": "cover" }} fill="true" />
+              <motion.div className={styles.text}
+                variants={zoom}
+                initial="zoomOut"
+                whileInView="visible"
+              >
+                <div className={styles.metContent}>
+                    <div className={styles.firstRow}>
+                      <h1 dangerouslySetInnerHTML={{ __html: t('metaverse-title') }}></h1>
+                      <div className= {styles.text} dangerouslySetInnerHTML={{ __html: t('metaverse-desc1') }}></div>
+                      <div className = {styles.arrowOne}>
+                        <BsFillCircleFill/>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-                <Parallax speed={-10} >
-                  <motion.div className={styles.text}
-                    variants={zoom}
-                    initial="zoomOut"
-                    whileInView="visible"
-                  >
-                    <h1 dangerouslySetInnerHTML={{ __html: t('metaverse-title') }}>
-
-                    </h1>
-                    <div dangerouslySetInnerHTML={{ __html: t('metaverse-desc') }}></div>
-                  </motion.div>
-                </Parallax>
-              </div>
+                  <Parallax speed={-20} >
+                    <div className={styles.secondRow}>
+                      <div className={styles.bigBg}>
+                        <Image src="/assets/images/metaverse.png" alt="what is: image" fill style={{ objectFit: "cover"}}/>
+                      </div>
+                    </div>
+                  </Parallax>
+                    <div className={styles.thirdRow}>
+                        <div className = {styles.arrowTwo}>
+                          <BsFillCircleFill/>
+                        </div>
+                      <div className= {styles.text} dangerouslySetInnerHTML={{ __html: t('metaverse-desc2') }}></div>
+                    </div>
+                </div>
+              </motion.div>
             </div>
           </section>
 

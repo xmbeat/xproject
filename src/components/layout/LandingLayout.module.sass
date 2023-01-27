@@ -44,17 +44,44 @@
 
             img
                 object-fit: contain
+
+        .disclaimer
+            width: 500px
+            background-color: rgb(37 80 75 / 0.63)
+            display: none
+            padding: 0.3rem 1rem
+            border-radius: 10rem
+            @media (min-width: 1024px)
+                display: block
+            &:hover
+                animation-play-state: paused
+            div
+                display: flex
+                overflow: hidden
+                white-space: nowrap
+                p
+                    display: inline-block
+                    font-size: 0.6rem
+                    color: #01C38E
+                    margin: 0
+                    padding-right: 1rem
+                    animation: marquee 15s linear infinite
+
+            @keyframes marquee
+                0%
+                    transform: translateX(0%)
+                100%
+                    transform: translateX(-100%)
+
         .navbarItems
+            width: 10rem
             display: flex
+            justify-content: flex-end
             align-items: center
             gap: 1rem
+            @media(max-width: 600px)
+                width: 2rem
 
-            span
-                display: none
-                font-size: 0.8rem
-                text-align: end
-                @media (min-width: 1024px)
-                    display: block
         div
             pointer-events: auto
     .content
