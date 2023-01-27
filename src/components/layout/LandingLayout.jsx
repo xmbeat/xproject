@@ -42,7 +42,6 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
     return <div className={styles.container}>
         <div className={`${styles.navbar} ${isNavbarBlured ? styles.blur : ''}`}>
             <div className={styles.logoContainer}>
-                {/* {!onlyTranslate && logo} */}
                 <div className={styles.logo}>
                     <Image src='/assets/images/logo.png' fill />
                 </div>
@@ -50,12 +49,14 @@ export default function LandingLayout({ children, onlyTranslate = false, logo = 
                     <Image src='/android-chrome-512x512.png' fill />
                 </div>
             </div>
+            <div className={styles.disclaimer}>
+                <div>
+                    <p>{ t('header-text') }</p>
+                    <p aria-hidden="true">{ t('header-text') }</p>
+                </div>
+            </div>
             <div className={styles.navbarItems}>
-                <span>{ t('header-text') }</span>
                 <LangSelector onChange={handleLanguageChange} />
-                {/* <Link href="/connect"> 
-                    <span className={styles.button}>{t('connect-wallet')}</span>
-                </Link> */}
             </div>
         </div>
         <div className={styles.content}>
