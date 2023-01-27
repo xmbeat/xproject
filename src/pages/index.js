@@ -58,21 +58,15 @@ export default function Home() {
           <section style={{ height: '100vh' }} className={`${styles.fixedSize} ${styles.first}`}>
             <div className={styles.centeredContent}>
               <motion.div
-                variants={side}
-                initial="hidden"
-                whileInView="visible"
-                className={styles.logo}
+              
               >
                 <Image src='/assets/images/logo.png' fill />
               </motion.div>
               <div className={styles.text}>
-                <motion.p
-                  variants={zoom}
-                  initial="zoomOut"
-                  whileInView="visible"
+                <p
                 >
                   {t('welcome')}
-                </motion.p>
+                </p>
               </div>
               <div className={styles.play} onClick={() => setShowPlayer(true)}>
                 <BsFillPlayFill />
@@ -82,13 +76,11 @@ export default function Home() {
           </section>
 
           {/* WHAT IS METAVERSE? */}
-          <section className={styles.adaptativeSize}>
+          <section className={`${styles.adaptativeSize } ${styles.metaverse}`} >
             <div className={styles.adaptativeContent}>
               <div className={styles.imageWithText}>
                 <motion.div className={styles.image}
-                  variants={zoom}
-                  initial="zoomOut"
-                  whileInView="visible"
+                
                 >
                   <div  className={styles.borderedContainer}>
                     <div className={styles.bg}>
@@ -113,13 +105,10 @@ export default function Home() {
           </section>
 
           {/* WHAT IS LANDIAN? */}
-          <section className={`${styles.fixedSize} ${styles.second}`}>
+          <section className={`${styles.adaptativeSize} ${styles.second}`}>
             <InnerContainer>
               <div className={styles.content}>
                 <motion.div
-                  variants={zoom}
-                  initial="zoomOut"
-                  whileInView="visible"
                   className={styles.imageWithText}>
                   <Parallax speed={-10} >
                     <div className={styles.text}>
@@ -147,7 +136,7 @@ export default function Home() {
 
 
           {/* ABOUT LANDIAN */}
-          <section className={styles.adaptativeSize}>
+          <section className={`${styles.adaptativeSize} ${styles.landian}`}>
             <AboutLandian />
           </section>
 
