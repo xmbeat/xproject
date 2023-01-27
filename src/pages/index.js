@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from 'styles/home.module.sass'
 import { BsFillPlayFill, BsFillPlayCircleFill } from 'react-icons/bs'
 import { IoIosWallet, IoWallet } from 'react-icons/io'
+import { BsFillCircleFill } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import { zoom, side } from 'effects/effects'
 import { Canvas } from '@react-three/fiber'
@@ -21,6 +22,7 @@ import Marketplace from 'components/Marketplace'
 import { Parallax } from 'react-scroll-parallax';
 import MobileCarousel from 'components/VideoCarrousel/MobileCarousel'
 import Vcarousel from 'components/VideoCarrousel/VCarousel'
+import InnerContainer from 'components/layout/InnerContainer'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -83,59 +85,62 @@ export default function Home() {
           {/* WHAT IS METAVERSE? */}
           <section className={styles.adaptativeSize}>
             <div className={styles.adaptativeContent}>
-              <div className={styles.imageWithText}>
-                <motion.div className={styles.image}
-                  variants={zoom}
-                  initial="zoomOut"
-                  whileInView="visible"
-                >
-                  <div  className={styles.borderedContainer}>
-                    <div className={styles.bg}>
-                      <Image src="/assets/images/what_is.png" alt="what is: image" style={{ "objectFit": "cover" }} fill="true" />
+              <motion.div className={styles.text}
+                variants={zoom}
+                initial="zoomOut"
+                whileInView="visible"
+              >
+                <div className={styles.metContent}>
+                    <div className={styles.firstRow}>
+                      <h1 dangerouslySetInnerHTML={{ __html: t('metaverse-title') }}></h1>
+                      <div className= {styles.text} dangerouslySetInnerHTML={{ __html: t('metaverse-desc1') }}></div>
+                      <div className = {styles.arrowOne}>
+                        <BsFillCircleFill/>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-                <Parallax speed={-10} >
-                  <motion.div className={styles.text}
-                    variants={zoom}
-                    initial="zoomOut"
-                    whileInView="visible"
-                  >
-                    <h1 dangerouslySetInnerHTML={{ __html: t('metaverse-title') }}>
-
-                    </h1>
-                    <div dangerouslySetInnerHTML={{ __html: t('metaverse-desc') }}></div>
-                  </motion.div>
-                </Parallax>
-              </div>
+                  <Parallax speed={-20} >
+                    <div className={styles.secondRow}>
+                      <div className={styles.bigBg}>
+                        <Image src="/assets/images/metaverse.png" alt="what is: image" fill style={{ objectFit: "cover"}}/>
+                      </div>
+                    </div>
+                  </Parallax>
+                    <div className={styles.thirdRow}>
+                        <div className = {styles.arrowTwo}>
+                          <BsFillCircleFill/>
+                        </div>
+                      <div className= {styles.text} dangerouslySetInnerHTML={{ __html: t('metaverse-desc2') }}></div>
+                    </div>
+                </div>
+              </motion.div>
             </div>
           </section>
 
           {/* WHAT IS LANDIAN? */}
           <section className={`${styles.fixedSize} ${styles.second}`}>
-            <div className={styles.centeredContent}
-            >
-              <motion.div
-                variants={zoom}
-                initial="zoomOut"
-                whileInView="visible"
-                className={styles.imageWithText}>
-                <Parallax speed={-10} >
-                  <div className={styles.text}>
-                    <h1 dangerouslySetInnerHTML={{ __html: t('landian-title') }}>
-                    </h1>
-                    <div dangerouslySetInnerHTML={{ __html: t('landiant-desc') }}></div>
-                  </div>
-                </Parallax>
-                <div className={styles.image}>
-                  <div className={styles.borderedContainer}>
-                    <div className={styles.bg}>
-                      <Image src="/assets/images/landian.png" alt="landian" style={{ "objectFit": "cover" }} fill="true" />
+            <InnerContainer>
+              <div className={styles.content}>
+                <motion.div
+                  variants={zoom}
+                  initial="zoomOut"
+                  whileInView="visible"
+                  className={styles.imageWithText}>
+                  <Parallax speed={-10} >
+                    <div className={styles.text}>
+                      <h1 dangerouslySetInnerHTML={{ __html: t('landian-title') }} />
+                      <div dangerouslySetInnerHTML={{ __html: t('landiant-desc') }} />
+                    </div>
+                  </Parallax>
+                  <div className={styles.image}>
+                    <div className={styles.borderedContainer}>
+                      <div className={styles.bg}>
+                        <Image src="/assets/images/landian.png" alt="landian" style={{ "objectFit": "contain" }} fill="true" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            </div>
+                </motion.div>
+              </div>
+            </InnerContainer>
           </section>
 
           {/* VIDEO CAROUSEL */}
