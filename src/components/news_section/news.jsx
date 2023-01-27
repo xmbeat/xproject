@@ -82,7 +82,7 @@ export default function News() {
                 else{
                     itemsPerPage = Math.floor(itemsPerPage)
                     var w = rect.width / itemsPerPage
-                    height = w * 1.4
+                    height = w * 1.2
                 }
                 cardStyle.current = {
                     height: `${height}px`
@@ -111,10 +111,10 @@ export default function News() {
                 centeredSlides={true}
                 autoHeight={false}
                 initialSlide={2}
-                onSlideChange={handleSlideChange}
                 navigation={true}
                 loop={true}
                 pagination={false}
+                autoplay={{delay: 5000}}
                 modules={[Pagination, Autoplay, Navigation, EffectCards]} >
                 {
                     items.map((item, index) =>
@@ -128,7 +128,8 @@ export default function News() {
                                     <div className={styles.newsDate}>{formatDate(item.date)}</div>
                                     <h2>{item.title}</h2>
                                     <h3>{item.subtitle}</h3>
-                                    <p>{item.tldr}</p>
+                                    <p className={styles.tldr}>{item.tldr}</p>
+                                    <div className={styles.spacer}></div>
                                     <Link className={styles.linkButton} href={item.href}>
                                         Read more
                                     </Link>

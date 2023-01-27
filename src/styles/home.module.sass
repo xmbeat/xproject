@@ -23,7 +23,12 @@
     transform: translate(-50%, -50%)
     position: relative
     p
+      font-size: 1rem
       text-align: center
+      margin: 2rem 0
+      @media (min-width: 1536px)
+        font-size: 2rem
+
   .adaptativeContent
     padding: 30px
     display: flex
@@ -95,6 +100,9 @@
     font-size: 60px
   .text
     max-width: 640px
+    @media (min-width: 1536px)
+      max-width: 100%
+
   span
     width: 100%
     font-size: 0.8rem
@@ -107,8 +115,32 @@
     @media (min-width: 1024px)
       display: none
 .second
-  @media (max-width: 600px)
-    width: unset
+  height: auto !important
+  min-height: 100vh
+  background-color: #000000df
+  @media (min-width: 768px)
+    height: 100vh !important
+  .content
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0 1rem
+    @media (min-width: 768px)
+      padding: 0 2rem
+
+    .text
+      h1
+        @media (min-width: 1600px)
+          font-size: 4rem
+      p
+        width: 100%
+        font-size: 0.8rem
+        margin: 1rem 0
+        @media (min-width: 1600px)
+          font-size: 1.8rem
+
 .third
   h1
     margin-bottom: 60px
@@ -127,13 +159,17 @@
     flex-basis: auto
     .bg
       width: 480px
-      height: 320px
+      height: 480px
       position: relative
+      @media (min-width: 1600px)
+        width: 35rem
+        height: 35rem
+
   .text
     width: 100%
     p
       text-align: left
-  @media(max-width: 600px)
+  @media(max-width: 1023px)
     flex-flow: column
     gap: 10px
     .image
@@ -304,9 +340,16 @@
 //     font-size: 24px
 
 .logo
-    width: 18rem
-    height: 3.5rem
+    width: 13rem
+    height: 2.5rem
     position: relative
-    @media(max-width: 600px)
-        width: 13rem
-        height: 2.5rem
+    @media(min-width: 600px)
+      width: 18rem
+      height: 3.5rem
+    @media (min-width: 1536px)
+      width: 25rem
+      height: 7rem
+
+    img
+      object-fit: contain
+
